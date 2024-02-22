@@ -27,7 +27,9 @@ def settext(_text):
 
 DEBUG = True
 
-con = pyodbc.connect("scouting.db")
+con = pyodbc.connect(
+    "Driver={SQL Server};SERVER=localhost;DATABASE=Scouting;UID=******;PWD=******"
+)
 cur = con.cursor()
 cur.execute(
     "CREATE TABLE IF NOT EXISTS scouting"
