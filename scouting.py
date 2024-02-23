@@ -7,7 +7,6 @@ from qreader import QReader
 
 import json
 
-
 keys = []
 
 

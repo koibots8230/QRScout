@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>QR Scout</title>
+    <title>QR Scout (Pit)</title>
     <link rel="stylesheet" href="style.css" />
     <script>
       var QRCode;
@@ -1182,167 +1182,72 @@
               type: "number",
               config: true,
             },
-            {
-              key: "n",
-              name: "No Show",
-              type: "bool",
-              config: false,
-            },
           ],
         },
         {
-          key: "auto",
-          name: "Autonomous",
+          key: "pitScouting",
+          name: "Pit Scouting",
           items: [
             {
-              key: "m",
-              name: "Mobility",
-              type: "bool",
-              config: true,
-            },
-            {
-              key: "A",
-              name: "Amp Scored",
-              type: "number",
-              config: true,
-            },
-            {
-              key: "a",
-              name: "Amp Missed",
-              type: "number",
-              config: true,
-            },
-            {
-              key: "S",
-              name: "Speaker Scored",
-              type: "number",
-              config: true,
-            },
-            {
-              key: "s",
-              name: "Speaker Missed",
-              type: "number",
-              config: true,
-            },
-          ],
-        },
-        {
-          key: "tele",
-          name: "Teleop",
-          items: [
-            {
-              key: "c",
-              name: "Coopertition",
-              type: "bool",
-              config: false,
-            },
-            {
-              key: "A",
-              name: "Amp Scored",
-              type: "number",
-              config: true,
-            },
-            {
-              key: "a",
-              name: "Amp Missed",
-              type: "number",
-              config: true,
-            },
-            {
-              key: "S",
-              name: "Speaker Scored",
-              type: "number",
-              config: true,
-            },
-            {
-              key: "s",
-              name: "Speaker Missed",
-              type: "number",
-              config: true,
-            },
-            {
-              key: "t",
-              name: "Trap Scored",
-              type: "number",
-              config: true,
-            },
-          ],
-        },
-        {
-          key: "end",
-          name: "Endgame",
-          items: [
-            {
-              key: "p",
-              name: "End Position",
+              key: "dimensions",
+              name: "Dimensions (Can the robot fit under stage?)",
               type: "select",
-              config: ["Climb", "Wing", "None"],
+              config: ["Yes", "No"],
             },
             {
-              key: "h",
-              name: "Harmony",
+              key: "shootAmpOrSpeaker",
+              name: "Can Shoot Amp or Speaker?",
               type: "select",
-              config: ["0", "2", "3"],
+              config: ["Yes", "No"],
             },
             {
-              key: "a",
-              name: "Spotlight (from driverstation)",
+              key: "peferAmpSpeaker",
+              name: "Prefers Amp or Speaker?",
               type: "select",
-              config: ["None", "Left", "Middle", "Right"],
-            },
-          ],
-        },
-        {
-          key: "post",
-          name: "Postgame",
-          items: [
-            {
-              key: "o",
-              name: "Offense Skill",
-              type: "select",
-              config: ["1", "2", "3"],
+              config: ["Yes", "No"],
             },
             {
-              key: "d",
-              name: "Defense Skill",
-              type: "select",
-              config: ["1", "2", "3"],
-            },
-            {
-              key: "w",
-              name: "Was Defended",
-              type: "bool",
-              config: true,
-            },
-            {
-              key: "D",
-              name: "Died",
-              type: "bool",
-              config: false,
-            },
-            {
-              key: "t",
-              name: "Tipped",
-              type: "bool",
-              config: false,
-            },
-            {
-              key: "c",
-              name: "Yellow/Red Card",
-              type: "select",
-              config: ["None", "Yellow", "Red"],
-            },
-            {
-              key: "f",
-              name: "Foul Points",
-              type: "number",
-              config: true,
-            },
-            {
-              key: "C",
-              name: "Comments",
+              key: "preferedPickupLocation",
+              name: "Preferred Pickup Location",
               type: "text",
-              config: false,
+              config: true,
+            },
+            {
+              key: "shootingDistance",
+              name: "Shooting Distance in Feet",
+              type: "number",
+              config: true,
+            },
+            {
+              key: "autos",
+              name: "Autos (max # of pieces consistently)",
+              type: "number",
+              config: true,
+            },
+            {
+              key: "defenseExperience",
+              name: "Defense Experience",
+              type: "text",
+              config: true,
+            },
+            {
+              key: "drivetrainType",
+              name: "Drivetrain Type",
+              type: "select",
+              config: ["add in info"],
+              config: true,
+            },
+            {
+              key: "speed",
+              name: "Estimated Speed",
+              type: "number",
+              config: true,
+            },
+            {
+              key: "whereClimbChain",
+              name: "Where Can Robot Climb Chain",
+              type: "select",
+              config: ["Side", "Middle"],
             },
           ],
         },
@@ -1483,11 +1388,14 @@
     </script>
   </head>
   <body>
-    <h1>QR Scout</h1>
-
-    <a href="pit.html" id="linkButton">Go To Pit Scouting</a>
+    <h1>QR Scout (Pit)</h1>
+    <a href="index.html" id="linkButton">Go To Normal Scouting</a>
     <form id="form">
       <!-- is autogenerated -->
+      <fieldset id="other">
+        <legend>Other Info</legend>
+        <textarea rows="29" cols="32"></textarea>
+      </fieldset>
     </form>
     <br /><br />
     <div class="buttons">
