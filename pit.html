@@ -1190,9 +1190,14 @@
           items: [
             {
               key: "dimensions",
-              name: "Dimensions (Can the robot fit under stage?)",
+              name: "Dimensions",
+              type: "text",
+            },
+            {
+              key: "measuredWithOrWithoutBumpers",
+              name: "Measured With or Without Bumpers",
               type: "select",
-              config: ["Yes", "No"],
+              config: ["With Bumpers", "Without Bumpers"],
             },
             {
               key: "shootAmpOrSpeaker",
@@ -1220,21 +1225,21 @@
             },
             {
               key: "autos",
-              name: "Autos (max # of pieces consistently)",
+              name: "Autos (Max # of Pieces Consistently)",
               type: "number",
               config: true,
             },
             {
               key: "defenseExperience",
               name: "Defense Experience",
-              type: "text",
-              config: true,
+              type: "select",
+              config: ["0", "1", "2", "3", "4", "5"],
             },
             {
               key: "drivetrainType",
               name: "Drivetrain Type",
               type: "select",
-              config: ["add in info"],
+              config: ["Tank", "Kit Tank", "WCD", "Mecanum", "Swerve", "Other"],
               config: true,
             },
             {
@@ -1245,9 +1250,25 @@
             },
             {
               key: "whereClimbChain",
-              name: "Where Can Robot Climb Chain",
+              name: "Where Can Robot Climb A Chain?",
               type: "select",
               config: ["Side", "Middle"],
+            },
+            {
+              key: "otherClimb",
+              name: "Robot Climbed Differently?",
+              type: "text",
+            },
+            {
+              key: "numOfDriveMotors",
+              name: "Drive Motors",
+              type: "number",
+              config: true,
+            },
+            {
+              key: "gearRatio",
+              name: "Gear Ratios",
+              type: "text",
             },
           ],
         },
