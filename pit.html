@@ -1165,16 +1165,10 @@
               config: true,
             },
             {
-              key: "m",
-              name: "Match Number",
-              type: "number",
-              config: true,
-            },
-            {
               key: "p",
               name: "Starting Position",
               type: "select",
-              config: ["Red 1", "Red 2", "Red 3", "Blue 1", "Blue 2", "Blue 3"],
+              config: ["Left", "Right", "Center"],
             },
             {
               key: "t",
@@ -1214,8 +1208,8 @@
             {
               key: "preferedPickupLocation",
               name: "Preferred Pickup Location",
-              type: "text",
-              config: true,
+              type: "select",
+              config: ["Ground", "Source", "None"],
             },
             {
               key: "shootingDistance",
