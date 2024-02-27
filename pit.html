@@ -1347,13 +1347,47 @@
               default:
               case "text":
               case "number": {
+                let outer = document.createElement("div");
+                outer.id = "outerDiv";
+
                 let value = document.createElement("input");
-                value.type = formScheme[groupnum]["items"][itemnum]["type"];
                 value.id = formScheme[groupnum]["items"][itemnum]["key"];
                 value.name = formScheme[groupnum]["items"][itemnum]["key"];
-                value.required =
-                  formScheme[groupnum]["items"][itemnum]["config"];
-                div.appendChild(value);
+                value.className = "number-input";
+                value.type = "number";
+                value.min = "0";
+                value.max = "69420";
+                value.dataset.count = "0";
+
+                let add = document.createElement("button");
+                add.innerText = "+";
+
+                add.onclick = function updateItem() {
+                  event.preventDefault();
+                  let counter = document.getElementById(
+                    formScheme[groupnum]["items"][itemnum]["key"],
+                  );
+                  counter.value = counter.dataset.count =
+                    parseInt(counter.dataset.count) + 1;
+                };
+
+                let sub = document.createElement("button");
+                sub.innerText = "-";
+
+                sub.onclick = function updateItem() {
+                  event.preventDefault();
+                  let counter = document.getElementById(
+                    formScheme[groupnum]["items"][itemnum]["key"],
+                  );
+                  counter.value = counter.dataset.count =
+                    parseInt(counter.dataset.count) - 1;
+                };
+
+                outer.appendChild(sub);
+                outer.appendChild(value);
+                outer.appendChild(add);
+
+                div.appendChild(outer);
                 break;
               }
               case "bool": {
