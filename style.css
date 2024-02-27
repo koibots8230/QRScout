@@ -1,22 +1,31 @@
 body {
   color: white;
-  font-size: 1.15em;
+  font-size: 2em;
   background: #191819;
   text-align: center;
+  zoom: 1.5;
 }
 
 form {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   justify-content: center;
-  align-items: stretch;
+  align-items: center;
   gap: 10px 18px;
   padding-left: 10px;
   padding-right: 10px;
 }
 
+input {
+  width: full;
+}
+
+button {
+  width: full;
+}
+
 fieldset {
-  width: 300px;
+  width: 500px;
   margin: 0;
   border: 2px solid;
   border-radius: 8px;
@@ -25,7 +34,7 @@ fieldset {
 
 legend {
   font-family: Georgia, serif;
-  font-size: 1.15em;
+  font-size: 1.5em;
   font-style: italic;
   font-weight: bold;
   text-align: left;
