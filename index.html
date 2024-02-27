@@ -1167,7 +1167,7 @@
             {
               key: "m",
               name: "Match Number",
-              type: "number",
+              type: "addsub",
               config: true,
             },
             {
@@ -1433,6 +1433,19 @@
                 value.name = formScheme[groupnum]["items"][itemnum]["key"];
                 value.required =
                   formScheme[groupnum]["items"][itemnum]["config"];
+                div.appendChild(value);
+                break;
+              }
+              case "addsub": {
+                let value = document.createElement("input");
+                value.id = formScheme[groupnum]["items"][itemnum]["key"];
+                value.name = formScheme[groupnum]["items"][itemnum]["key"];
+                value.className = "number-input";
+                value.type = "number";
+                value.min = "0";
+                value.max = "100";
+                value.dataset.count = "0";
+
                 div.appendChild(value);
                 break;
               }
