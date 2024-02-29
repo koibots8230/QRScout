@@ -7,6 +7,11 @@
         width: 150px;
         height: 150px;
       }
+
+      .clearButton {
+        width: 75px;
+        height: 150px;
+      }
       .modal {
         display: none;
         height: 50px;
@@ -1651,10 +1656,10 @@
     </form>
     <br /><br />
     <div class="buttons">
+      <button onclick="clearInputs()" class="clearButton">Clear</button>
       <button onclick="generateQR()" class="genQrButton">
         Generate QR Code
       </button>
-      <button onclick="clearInputs()">Clear</button>
     </div>
     <div id="overlay" class="hide" onclick="popup(0)"></div>
     <div id="popup" class="hide">
