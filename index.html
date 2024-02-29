@@ -1,12 +1,11 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>QR Scout</title>
+    <title>QR Scout (Stand)</title>
     <style>
       .modal {
         display: none;
         height: 50px;
-        background: #191819;
         color: black;
         align-self: center;
       }
@@ -1598,6 +1597,7 @@
                 value.required =
                   formScheme[groupnum]["items"][itemnum]["config"];
                 div.appendChild(value);
+                break;
               }
               case "number": {
                 let outer = document.createElement("div");
@@ -1704,7 +1704,7 @@
     </script>
   </head>
   <body>
-    <h1>QR Scout</h1>
+    <h1>QR Scout (Stand)</h1>
     <div id="popup" class="modal">
       <!-- Modal content -->
       <div class="modal-content">
