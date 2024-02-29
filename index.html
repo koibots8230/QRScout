@@ -9,6 +9,12 @@
         color: black;
         align-self: center;
       }
+
+      .genQrButton {
+        width: 150px;
+        height: 150px;
+      }
+
       body {
         color: white;
         font-size: 2em;
@@ -28,11 +34,12 @@
       }
 
       input {
-        width: full;
+        height: 22px;
       }
 
       button {
-        width: full;
+        width: 30px;
+        height: 30px;
       }
 
       fieldset {
@@ -1720,7 +1727,9 @@
     </form>
     <br /><br />
     <div class="buttons">
-      <button onclick="generateQR()">Generate QR Code</button>
+      <button onclick="generateQR()" class="genQrButton">
+        Generate QR Code
+      </button>
       <button onclick="clearInputs()">Clear</button>
     </div>
     <div id="overlay" class="hide" onclick="popup(0)"></div>
