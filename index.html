@@ -108,8 +108,8 @@
         position: fixed;
         width: calc(60vmin + (6px * 2));
         height: calc((60vmin + (6px * 3)) + 1em);
-        left: 50vw;
-        top: 50vh;
+        left: 50%;
+        top: 50%;
         transform: translate(-50%, -50%);
         background: white;
         border: 2px solid;
@@ -1555,15 +1555,19 @@
         if (completed) {
           console.log(JSON.stringify(json).toString());
           qrcode.makeCode(JSON.stringify(json).toString());
-          document.getElementById("download").href = document
-            .getElementById("qrcode")
-            .getElementsByTagName("img")[0].src;
+          popup(1);
           document.getElementById("download").download =
             "Scouting-" + new Date().getHours() + "-" + new Date().getMinutes();
-          popup(1);
+          makeQrCodeDownloadable();
         } else {
           alert("Please fill out all empty inputs");
         }
+      }
+
+      function makeQrCodeDownloadable() {
+        document.getElementById("download").href = document
+          .getElementById("qrcode")
+          .getElementsByTagName("img")[0].src;
       }
 
       function popup(hide) {
@@ -1712,11 +1716,6 @@
         popupWindow.style.display = "inline";
         popupWindow.style.margin = "5px";
 
-        for (let i = 0; i < children.length; i++) {
-          child = children[i];
-          child.style.width = "500px";
-        }
-
         if (clearInputs !== undefined) {
           if (clearInputs === true) {
             popupWindow.style.display = "none";
@@ -1764,7 +1763,7 @@
     </div>
     <div id="overlay" class="hide" onclick="popup(0)"></div>
     <div id="popup" class="hide">
-      <a id="download">
+      <a id="download" download>
         <div id="qrcode"></div>
       </a>
       <p>Click on QR code to download, click off to close popup</p>
