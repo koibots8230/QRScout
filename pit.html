@@ -1445,7 +1445,7 @@
         },
       ];
 
-      function generateQR() {
+      async function generateQR() {
         let json = {};
 
         const sections = form.getElementsByTagName("fieldset");
@@ -1474,6 +1474,7 @@
         if (completed) {
           console.log(JSON.stringify(json).toString());
           qrcode.makeCode(JSON.stringify(json).toString());
+          await new Promise((r) => setTimeout(r, 50));
           document.getElementById("download").href = document
             .getElementById("qrcode")
             .getElementsByTagName("img")[0].src;
