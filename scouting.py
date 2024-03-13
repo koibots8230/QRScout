@@ -1,5 +1,6 @@
 import tkinter
 import sqlite3
+import pyodbc
 
 from cv2 import VideoCapture, flip, cvtColor, COLOR_BGR2RGBA
 from PIL import ImageTk, Image
@@ -25,7 +26,10 @@ def settext(_text):
 
 DEBUG = True
 
-con = sqlite3.connect("scouting.db")
+
+con = pyodbc.connect(
+    "Driver={SQL Server};SERVER=localhost;DATABASE=Scouting;UID=******;PWD=******"
+)
 cur = con.cursor()
 cur.execute(
     "CREATE TABLE IF NOT EXISTS scouting"
@@ -61,6 +65,31 @@ cur.execute(
     ")"
 )
 
+cur.execute(
+    "CREATE TABLE IF NOT EXISTS pitScouting"
+    "("
+    "id INT PRIMARY KEY"
+    "initials, "
+    "matchnum, "
+    "startpos, "
+    "teamnum, "
+    "dimensions, "
+    "measuredWithOrWithoutBumpers, "
+    "shootAmpOrSpeaker, "
+    "preferAmpOrSpeaker, "
+    "preferedPicupLocation, "
+    "shootingDistance, "
+    "autos, "
+    "defenseExperience, "
+    "drivetrainType, "
+    "speed, "
+    "whereClimbChain, "
+    "otherClimb, "
+    "numOfDriveMotors, "
+    "gearRatio"
+    ")"
+)
+
 decoder = QReader()
 camera = VideoCapture(0)
 root = tkinter.Tk()
@@ -74,6 +103,11 @@ text.pack(padx=10, pady=10)
 if not camera.isOpened():
     print("Camera could not be opened")
     quit()
+
+input: str = input("Stand or Pit Scouting? [S/p]: ")
+
+if input.lower() != 's' or input.lower() != 'p':
+    input = 's'
 
 while True:
     while True:
@@ -115,68 +149,114 @@ while True:
         print(f"Data: {data}")
     settext(data)
 
-    cur.execute(
-        "INSERT INTO scouting"
-        "("
-        "initials, "
-        "matchnum, "
-        "startpos, "
-        "teamnum, "
-        "noshow, "
-        "automobile, "
-        "autoamp, "
-        "autoampmiss, "
-        "autospeaker, "
-        "autospeakermiss, "
-        "coop, "
-        "teleamp, "
-        "teleampmiss, "
-        "telespeaker, "
-        "telespeakermiss, "
-        "trap, "
-        "endpos, "
-        "harmony, "
-        "spotlight, "
-        "offence, "
-        "defence, "
-        "died, "
-        "tipped, "
-        "defended, "
-        "card, "
-        "foul, "
-        "comments"
-        ") "
-        "VALUES"
-        "(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-        (
-            data['pre']['i'],        # initials
-                    int(data['pre']['m']),   # matchnum
-                    data['pre']['p'],        # startpos
-                    int(data['pre']['t']),   # teamnum
-                    int(data['pre']['n']),   # noshow
-                    int(data['auto']['m']),  # automobile
-                    int(data['auto']['A']),  # autoamp
-                    int(data['auto']['a']),  # autoampmiss
-                    int(data['auto']['S']),  # autospeaker
-                    int(data['auto']['s']),  # autospeakermiss
-                    int(data['tele']['c']),  # coop
-                    int(data['tele']['A']),  # teleamp
-                    int(data['tele']['a']),  # teleampmiss
-                    int(data['tele']['S']),  # telespeaker
-                    int(data['tele']['s']),  # telespeakermiss
-                    int(data['tele']['t']),  # trap
-                    data['end']['p'],        # endpos
-                    int(data['end']['h']),   # harmony
-                    data['end']['h'],        # spotlight
-                    int(data['post']['o']),  # offence
-                    int(data['post']['d']),  # defence
-                    int(data['post']['D']),  # died
-                    int(data['post']['t']),  # tipped
-                    int(data['post']['w']),  # defended
-                    data['post']['c'],       # card
-                    int(data['post']['f']),  # foul
-                    data['post']['C']        # comments
+    if input == 's':
+        cur.execute(
+            "INSERT INTO scouting"
+            "("
+            "initials, "
+            "matchnum, "
+            "startpos, "
+            "teamnum, "
+            "noshow, "
+            "automobile, "
+            "autoamp, "
+            "autoampmiss, "
+            "autospeaker, "
+            "autospeakermiss, "
+            "coop, "
+            "teleamp, "
+            "teleampmiss, "
+            "telespeaker, "
+            "telespeakermiss, "
+            "trap, "
+            "endpos, "
+            "harmony, "
+            "spotlight, "
+            "offence, "
+            "defence, "
+            "died, "
+            "tipped, "
+            "defended, "
+            "card, "
+            "foul, "
+            "comments"
+            ") "
+            "VALUES"
+            "(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+            (
+                data['pre']['i'],        # initials
+                        int(data['pre']['matchNumber']),   # matchnum
+                        data['pre']['p'],        # startpos
+                        int(data['pre']['t']),   # teamnum
+                        int(data['pre']['n']),   # noshow
+                        int(data['auto']['m']),  # automobile
+                        int(data['auto']['A']),  # autoamp
+                        int(data['auto']['a']),  # autoampmiss
+                        int(data['auto']['S']),  # autospeaker
+                        int(data['auto']['s']),  # autospeakermiss
+                        int(data['tele']['cc']),  # coop
+                        int(data['tele']['AA']),  # teleamp
+                        int(data['tele']['am']),  # teleampmiss
+                        int(data['tele']['SS']),  # telespeaker
+                        int(data['tele']['ss']),  # telespeakermiss
+                        int(data['tele']['tt']),  # trap
+                        data['end']['p'],        # endpos
+                        int(data['end']['h']),   # harmony
+                        data['end']['a'],        # spotlight
+                        int(data['post']['o']),  # offence
+                        int(data['post']['d']),  # defence
+                        int(data['post']['D']),  # died
+                        int(data['post']['t']),  # tipped
+                        int(data['post']['w']),  # defended
+                        data['post']['c'],       # card
+                        int(data['post']['f']),  # foul
+                        data['post']['C']        # comments
+            )
         )
-    )
+    else:
+        cur.execute(
+            "INSERT INTO pitScouting"
+            "("
+            "initials, "
+            "matchnum, "
+            "startpos, "
+            "teamnum, "
+            "dimensions, "
+            "measuredWithOrWithoutBumpers, "
+            "shootAmpOrSpeaker, "
+            "preferAmpOrSpeaker, "
+            "preferedPicupLocation, "
+            "shootingDistance, "
+            "autos, "
+            "defenseExperience, "
+            "drivetrainType, "
+            "speed, "
+            "whereClimbChain, "
+            "otherClimb, "
+            "numOfDriveMotors, "
+            "gearRatio"
+            ") "
+            "VALUES"
+            "(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+            (
+                data['pre']['i'],
+                data['pre']['p'],
+                int(data['pre']['t']),
+                data['pitScouting']['dimension'],
+                data['pitScouting']['measuredWithOrWithoutBumper'],
+                data['pitScouting']['shootAmpOrSpeaker'],
+                data['pitScouting']['peferAmpSpeaker'],
+                data['pitScouting']['preferedPickupLocation'],
+                int(data['pitScouting']['shootingDistance']),
+                int(data['pitScouting']['autos']),
+                data['pitScouting']['defenseExperience'],
+                data['pitScouting']['drivetrainType'],
+                int(data['pitScouting']['speed']),
+                data['pitScouting']['whereClimbChain'],
+                data['pitScouting']['otherClimb'],
+                int(data['pitScouting']['numOfDriveMotor'],
+                data['pitScouting']['gearRatio'],
+            )
+        ))
     cur.connection.commit()
     
