@@ -28,8 +28,9 @@ DEBUG = True
 
 
 con = pyodbc.connect(
-    "Driver={SQL Server};SERVER=localhost;DATABASE=Scouting;UID=******;PWD=******"
+    "Driver={/opt/microsoft/msodbcsql18/lib64/libmsodbcsql-18.3.so.2.1};SERVER=10.31.32.249;DATABASE=Scouting;UID='koibots';PWD='8230'"
 )
+
 cur = con.cursor()
 cur.execute(
     "CREATE TABLE IF NOT EXISTS scouting"
@@ -104,11 +105,6 @@ if not camera.isOpened():
     print("Camera could not be opened")
     quit()
 
-input: str = input("Stand or Pit Scouting? [S/p]: ")
-
-if input.lower() != 's' or input.lower() != 'p':
-    input = 's'
-
 while True:
     while True:
         errors, image = camera.read()
@@ -149,7 +145,8 @@ while True:
         print(f"Data: {data}")
     settext(data)
 
-    if input == 's':
+    if data['tele']['a']:
+        print("stand scouting")
         cur.execute(
             "INSERT INTO scouting"
             "("
@@ -185,35 +182,36 @@ while True:
             "(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
             (
                 data['pre']['i'],        # initials
-                        int(data['pre']['matchNumber']),   # matchnum
-                        data['pre']['p'],        # startpos
-                        int(data['pre']['t']),   # teamnum
-                        int(data['pre']['n']),   # noshow
-                        int(data['auto']['m']),  # automobile
-                        int(data['auto']['A']),  # autoamp
-                        int(data['auto']['a']),  # autoampmiss
-                        int(data['auto']['S']),  # autospeaker
-                        int(data['auto']['s']),  # autospeakermiss
-                        int(data['tele']['cc']),  # coop
-                        int(data['tele']['AA']),  # teleamp
-                        int(data['tele']['am']),  # teleampmiss
-                        int(data['tele']['SS']),  # telespeaker
-                        int(data['tele']['ss']),  # telespeakermiss
-                        int(data['tele']['tt']),  # trap
-                        data['end']['p'],        # endpos
-                        int(data['end']['h']),   # harmony
-                        data['end']['a'],        # spotlight
-                        int(data['post']['o']),  # offence
-                        int(data['post']['d']),  # defence
-                        int(data['post']['D']),  # died
-                        int(data['post']['t']),  # tipped
-                        int(data['post']['w']),  # defended
-                        data['post']['c'],       # card
-                        int(data['post']['f']),  # foul
-                        data['post']['C']        # comments
+                int(data['pre']['matchNumber']),   # matchnum
+                data['pre']['p'],        # startpos
+                int(data['pre']['t']),   # teamnum
+                int(data['pre']['n']),   # noshow
+                int(data['auto']['m']),  # automobile
+                int(data['auto']['A']),  # autoamp
+                int(data['auto']['a']),  # autoampmiss
+                int(data['auto']['S']),  # autospeaker
+                int(data['auto']['s']),  # autospeakermiss
+                int(data['tele']['cc']),  # coop
+                int(data['tele']['AA']),  # teleamp
+                int(data['tele']['am']),  # teleampmiss
+                int(data['tele']['SS']),  # telespeaker
+                int(data['tele']['ss']),  # telespeakermiss
+                int(data['tele']['tt']),  # trap
+                data['end']['p'],        # endpos
+                int(data['end']['h']),   # harmony
+                data['end']['a'],        # spotlight
+                int(data['post']['o']),  # offence
+                int(data['post']['d']),  # defence
+                int(data['post']['D']),  # died
+                int(data['post']['t']),  # tipped
+                int(data['post']['w']),  # defended
+                data['post']['c'],       # card
+                int(data['post']['f']),  # foul
+                data['post']['C']        # comments
             )
         )
     else:
+        print("pit scouting")
         cur.execute(
             "INSERT INTO pitScouting"
             "("
