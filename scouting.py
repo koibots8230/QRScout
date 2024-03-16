@@ -252,9 +252,9 @@ while True:
                 int(data['pitScouting']['speed']),
                 data['pitScouting']['whereClimbChain'],
                 data['pitScouting']['otherClimb'],
-                int(data['pitScouting']['numOfDriveMotor'],
+                int(data['pitScouting']['numOfDriveMotor']),
                 data['pitScouting']['gearRatio'],
-            )
+            
         ))
     cur.connection.commit()
     
