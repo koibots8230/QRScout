@@ -1,6 +1,6 @@
 import tkinter
 import sqlite3
-import pyodbc
+import psycopg
 
 from cv2 import VideoCapture, flip, cvtColor, COLOR_BGR2RGBA
 from PIL import ImageTk, Image
@@ -27,70 +27,11 @@ def settext(_text):
 DEBUG = True
 
 
-con = pyodbc.connect(
-    "Driver={/opt/microsoft/msodbcsql18/lib64/libmsodbcsql-18.3.so.2.1};SERVER=10.31.32.249;DATABASE=Scouting;UID='koibots';PWD='8230'"
+con = psycopg.connect(
+    "dbname=scouting user=postgres host=localhost password=postgres port=5432"
 )
 
 cur = con.cursor()
-cur.execute(
-    "CREATE TABLE IF NOT EXISTS scouting"
-    "("
-    "id INT PRIMARY KEY, "
-    "initials, "
-    "matchnum, "
-    "startpos, "
-    "teamnum, "
-    "noshow, "
-    "automobile, "
-    "autoamp, "
-    "autoampmiss, "
-    "autospeaker, "
-    "autospeakermiss, "
-    "coop, "
-    "teleamp, "
-    "teleampmiss, "
-    "telespeaker, "
-    "telespeakermiss, "
-    "trap, "
-    "endpos, "
-    "harmony, "
-    "spotlight, "
-    "offence, "
-    "defence, "
-    "died, "
-    "tipped, "
-    "defended, "
-    "card, "
-    "foul, "
-    "comments"
-    ")"
-)
-
-cur.execute(
-    "CREATE TABLE IF NOT EXISTS pitScouting"
-    "("
-    "id INT PRIMARY KEY"
-    "initials, "
-    "matchnum, "
-    "startpos, "
-    "teamnum, "
-    "dimensions, "
-    "measuredWithOrWithoutBumpers, "
-    "shootAmpOrSpeaker, "
-    "preferAmpOrSpeaker, "
-    "preferedPicupLocation, "
-    "shootingDistance, "
-    "autos, "
-    "defenseExperience, "
-    "drivetrainType, "
-    "speed, "
-    "whereClimbChain, "
-    "otherClimb, "
-    "numOfDriveMotors, "
-    "gearRatio"
-    ")"
-)
-
 decoder = QReader()
 camera = VideoCapture(0)
 root = tkinter.Tk()
@@ -145,41 +86,46 @@ while True:
         print(f"Data: {data}")
     settext(data)
 
-    if data['tele']['a']:
+    if data.get('tele', {}).get('a'):
         print("stand scouting")
         cur.execute(
-            "INSERT INTO scouting"
-            "("
-            "initials, "
-            "matchnum, "
-            "startpos, "
-            "teamnum, "
-            "noshow, "
-            "automobile, "
-            "autoamp, "
-            "autoampmiss, "
-            "autospeaker, "
-            "autospeakermiss, "
-            "coop, "
-            "teleamp, "
-            "teleampmiss, "
-            "telespeaker, "
-            "telespeakermiss, "
-            "trap, "
-            "endpos, "
-            "harmony, "
-            "spotlight, "
-            "offence, "
-            "defence, "
-            "died, "
-            "tipped, "
-            "defended, "
-            "card, "
-            "foul, "
-            "comments"
-            ") "
-            "VALUES"
-            "(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+            """
+            INSERT INTO stand_scouting 
+            (
+            automobile,
+            card,
+            comments,
+            coop,
+            defended,
+            dies,
+            end_position,
+            initals,
+            no_show,
+            spotlight,
+            start_position,
+            tipped,
+            auto_amp,
+            auto_amp_miss,
+            auto_note_score,
+            auto_pieces,
+            auto_speaker,
+            auto_speaker_miss,
+            defense,
+            foul,
+            harmony,
+            match_number,
+            offense,
+            teamnum,
+            tele_amp,
+            tele_amp_miss,
+            tele_note_score,
+            tele_pieces,
+            tele_speaker,
+            tele_speaker_miss,
+            trap
+            ) VALUES (
+                %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s
+            )""", 
             (
                 data['pre']['i'],        # initials
                 int(data['pre']['matchNumber']),   # matchnum
@@ -213,35 +159,35 @@ while True:
     else:
         print("pit scouting")
         cur.execute(
-            "INSERT INTO pitScouting"
-            "("
-            "initials, "
-            "matchnum, "
-            "startpos, "
-            "teamnum, "
-            "dimensions, "
-            "measuredWithOrWithoutBumpers, "
-            "shootAmpOrSpeaker, "
-            "preferAmpOrSpeaker, "
-            "preferedPicupLocation, "
-            "shootingDistance, "
-            "autos, "
-            "defenseExperience, "
-            "drivetrainType, "
-            "speed, "
-            "whereClimbChain, "
-            "otherClimb, "
-            "numOfDriveMotors, "
-            "gearRatio"
-            ") "
-            "VALUES"
-            "(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+            """
+            INSERT INTO pit_scouting (
+                initals,
+                starting_position,
+                teamnum,
+                dimensions, 
+                measured_with_or_without_bumpers,
+                can_shoot_amp_or_speaker,
+                prefers_amp_or_speaker,
+                preferred_pickup_location,
+                shooting_distance,
+                autos, 
+                defense_experience,
+                drivetrain_type, 
+                estimated_speed, 
+                where_can_robot_climb_a_chain,
+                different_climb,
+                drive_motors,
+                gear_ratios
+            ) VALUES (
+                %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s
+            )
+            """,
             (
                 data['pre']['i'],
                 data['pre']['p'],
                 int(data['pre']['t']),
-                data['pitScouting']['dimension'],
-                data['pitScouting']['measuredWithOrWithoutBumper'],
+                data['pitScouting']['dimensions'],
+                data['pitScouting']['measuredWithOrWithoutBumpers'],
                 data['pitScouting']['shootAmpOrSpeaker'],
                 data['pitScouting']['peferAmpSpeaker'],
                 data['pitScouting']['preferedPickupLocation'],
@@ -252,9 +198,9 @@ while True:
                 int(data['pitScouting']['speed']),
                 data['pitScouting']['whereClimbChain'],
                 data['pitScouting']['otherClimb'],
-                int(data['pitScouting']['numOfDriveMotor']),
+                int(data['pitScouting']['numOfDriveMotors']),
                 data['pitScouting']['gearRatio'],
             
         ))
-    cur.connection.commit()
+    #cur.connection.commit()
     

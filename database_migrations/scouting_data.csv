@@ -1,0 +1,216 @@
+﻿Automobile,Card,Comments,Coop,Defended,Died,Endpos,Id,Initials,Noshow,Spotlight,Startpos,Tipped,Autoamp,Autoampmiss,AutoNoteScore,Autopieces,Autospeaker,Autospeakermiss,Defence,Foul,Harmony,Matchnum,Offence,Teamnum,Teleamp,Teleampmiss,TeleNoteScore,Telepieces,Telespeaker,Telespeakermiss,Trap
+True,None,,False,True,False,Wing,22,SC,False,0,Blue 2,False,0,0,5,1,1,0,2,2,0,2,2,1629,0,0,18,10,9,1,0
+True,None,"Long robot. Intake, speed, and shooting was slow. Amp only.",False,False,False,Wing,23,CH,False,0,Blue 1,False,0,0,0,0,0,0,2,2,0,1,1,9403,3,1,3,4,0,0,0
+True,None,Could not see coop,False,False,False,Climb,24,GSR,False,0,Red 1,False,0,0,0,0,0,0,1,2,0,1,1,3361,0,0,0,1,0,1,0
+False,None,"6 cycles, mostly accurate",False,True,False,Climb,25,GAB,False,0,Red 2,False,0,0,0,0,0,0,1,2,0,0,2,1086,5,1,5,6,0,0,0
+False,None,During auto and a little bit after teleop started it was sitting there,False,False,False,None,26,DC,False,0,Blue 3,False,0,0,0,0,0,0,1,0,0,1,1,1885,0,2,0,2,0,0,0
+True,None,Struggled to move,False,False,False,Climb,27,CH,False,0,Red 3,False,0,0,0,0,0,0,2,5,0,0,1,5830,1,0,1,1,0,0,0
+True,None,"Very obvious lack of auto-align, no ground intake or amp scoring",False,False,False,Climb,28,GSR,False,0,Blue 1,False,0,0,0,0,0,0,1,5,0,3,1,9003,0,0,0,4,0,4,0
+False,None,,False,False,False,Wing,29,AL,False,0,Red 1,False,0,0,0,0,0,0,2,0,0,3,2,9033,0,0,14,7,7,0,0
+True,None,,False,True,False,Wing,30,SC,False,0,Blue 2,False,0,0,20,4,4,0,2,5,0,3,3,9496,1,1,17,10,8,0,0
+True,None,"Very slow, got a note stuck inside the bot",False,True,False,None,31,MF,False,0,Red 1,False,0,0,0,0,0,0,1,0,0,4,1,6189,0,0,0,1,0,1,0
+True,None,takes a while to rev up shooter,False,True,False,Wing,32,AL,False,0,Red 2,False,0,0,5,2,1,1,2,0,0,4,2,4575,0,0,6,4,3,1,0
+False,None,,False,True,False,Climb,33,Whe,False,2,Blue 3,False,0,0,5,1,1,0,2,5,2,4,3,5804,10,0,12,12,1,1,0
+True,None,Crashed into stage and broke shooter,True,True,False,Climb,34,SC,False,2,Blue 2,False,0,0,15,3,3,0,2,2,2,4,2,401,1,0,7,7,3,3,0
+False,None,"No ground intake or amp, however consciestent speaker and trap capable",True,False,False,Climb,35,GSR,False,0,Blue 1,False,0,0,0,0,0,0,2,5,0,5,2,977,0,0,8,5,4,1,0
+True,None,note got stuck on bot for a sec,True,False,False,None,36,AL,False,0,Red 2,False,0,0,5,3,1,2,2,0,0,5,3,449,5,1,7,7,1,0,0
+False,None,Na,False,True,False,None,37,WHW,False,0,Blue 3,False,0,0,0,0,0,0,1,5,0,5,1,9403,5,1,5,6,0,0,0
+True,None,,False,True,False,None,38,SC,False,0,Blue 2,False,0,0,0,1,0,1,2,5,0,5,1,6194,0,0,0,4,0,4,0
+False,None,,False,True,False,None,39,AL,True,0,Red 1,False,0,0,0,0,0,0,1,0,0,6,1,3361,0,0,0,0,0,0,0
+True,None,Speaker bot.,False,False,False,Climb,40,AK,False,0,Red 1,False,0,0,5,1,1,0,1,0,0,6,2,9003,0,0,2,2,1,1,0
+False,None,"Really good amp, speaker shooter takes along time to line up",True,True,False,Climb,41,WHW,False,0,Red 3,False,0,0,0,0,0,0,2,0,0,5,1,5830,4,0,6,5,1,0,0
+False,None,"Incredibly good speaker shot, ground intake elevates that",True,False,False,Climb,42,GSR,False,0,Blue 1,False,0,0,0,1,0,1,1,0,0,6,3,3939,0,0,14,7,7,0,0
+True,None,A bit tippy,False,False,False,Wing,43,SC,False,0,Blue 2,False,0,0,5,2,1,1,2,0,0,6,1,4575,0,0,2,5,1,4,0
+True,None,Can do both amp and speaker well,False,False,False,Climb,44,GAB,False,0,Blue 2,False,0,0,0,0,0,0,2,0,0,6,2,6802,2,0,6,4,2,0,0
+False,None,We dead,False,False,False,None,45,GAB,True,0,Blue 2,False,0,0,0,0,0,0,2,0,0,7,2,8230,0,0,0,0,0,0,0
+True,None,"Extremely slow bot, e-stop dead, no ground intake no amp shooter not strong enough",False,False,True,None,46,GSR,False,0,Blue 1,False,0,0,0,0,0,0,1,5,0,7,1,6189,0,0,0,2,0,2,0
+True,None,Lost connection,False,True,False,Climb,47,Whw,False,0,Red 3,False,0,0,5,2,1,1,1,5,0,6,2,5724,1,2,1,3,0,0,0
+False,None,Very fast and mobile robot.,False,False,False,Climb,48,AK,False,0,Red 2,False,0,0,0,0,0,0,2,0,0,7,3,5804,2,0,10,7,4,1,0
+True,None,,False,True,False,None,49,Whw,False,0,Red 3,False,0,0,0,0,0,0,1,2,0,7,2,4456,0,0,4,3,2,1,0
+False,None,"Slow, coms temp lost, shooter too strong",True,False,False,Climb,50,GSR,False,0,Blue 1,False,0,0,0,0,0,0,1,5,0,8,1,141,0,0,0,1,0,1,0
+True,None,Had trouble collecting from the source.,False,True,False,None,51,AK,False,0,Red 2,False,0,0,5,2,1,1,1,2,0,8,1,401,2,0,4,5,1,2,0
+True,None,"Very slow, died once and came back",False,True,False,Climb,52,SC,False,0,Blue 3,False,0,0,5,1,1,0,1,5,0,8,1,141,0,0,0,0,0,0,0
+True,None,,False,True,False,None,53,Whw,False,0,Red 3,False,0,0,5,1,1,0,1,0,0,9,2,9496,0,0,14,7,7,0,0
+False,None,Slow Intake,False,True,False,Climb,54,ABC,False,0,Blue 1,False,0,0,0,0,0,0,1,0,0,9,1,1262,0,0,2,5,1,4,0
+True,None,Dead,True,False,True,Climb,55,GAB,False,0,Red 1,False,0,0,0,0,0,0,2,5,0,9,1,9033,0,0,2,1,1,0,0
+False,None,A fast amp bot.,False,True,False,None,56,AK,False,0,Red 2,False,0,0,0,0,0,0,1,0,0,9,1,977,3,0,3,4,0,1,0
+True,None,Attempted climb and harmony,True,True,False,None,57,SC,False,0,Blue 3,False,0,0,0,0,0,0,2,5,0,9,3,1086,0,0,14,9,7,2,0
+False,None,,False,True,False,Wing,58,Whw,False,0,Red 3,False,0,0,0,0,0,0,1,4,0,10,1,1793,0,0,0,0,0,0,0
+True,None,Moderate speed and misses a lot.,False,False,False,Climb,59,AK,False,0,Red 1,False,0,0,0,0,0,0,2,0,0,10,2,5724,0,0,4,5,2,3,0
+True,None,Spent the majority of the match just waiting to climb,False,False,False,None,60,MF,False,0,Blue 2,False,0,0,0,0,0,0,1,0,0,10,1,141,0,0,0,1,0,1,0
+True,None,Super slow,True,False,False,Wing,61,GAB,False,0,Red 1,False,0,0,0,0,0,0,1,5,0,10,1,6189,0,0,2,2,1,1,0
+True,None,Intake fine cant shoot,False,False,True,None,62,SC,False,0,Blue 3,False,0,0,0,0,0,0,1,0,0,10,1,6194,0,0,0,0,0,0,0
+True,None,SLOOW!!,False,False,False,Wing,63,ABC,False,0,Blue 1,False,0,0,0,0,0,0,1,0,0,10,2,9403,3,0,3,3,0,0,0
+True,None,No intake,False,False,False,Wing,64,ABC,False,0,Blue 1,False,0,0,0,0,0,0,1,0,0,11,1,3361,0,0,2,1,1,0,0
+True,None,Broken shooter or intake,False,False,False,Wing,65,GAB,False,0,Red 1,False,0,0,5,1,1,0,2,0,0,11,1,1087,0,0,0,0,0,0,0
+False,None,All-around BEAST,True,False,False,Climb,66,GSR,False,2,Red 3,False,0,0,5,1,1,0,2,5,2,11,3,5804,5,0,17,11,6,0,0
+True,None,"Fast, no climb",False,True,False,None,67,MF,False,0,Blue 2,False,0,0,10,2,2,0,1,0,0,11,2,9496,0,0,20,12,10,2,0
+True,None,Fast and consistent speaker bot.,False,True,False,Climb,68,AK,False,0,Red 2,False,0,0,5,1,1,0,2,0,0,11,3,1629,0,0,12,7,6,1,0
+True,None,,True,True,False,Climb,69,CG,False,0,Blue 3,False,0,0,5,1,1,0,1,0,0,11,2,6802,0,0,8,4,4,0,0
+True,None,,False,True,False,Wing,70,Whw,False,0,Blue 2,False,0,0,10,2,2,0,1,3,0,12,3,449,0,0,0,0,0,0,0
+False,None,"Has ground intake and amp+speaker, however intake inconsistent",True,False,False,Climb,71,GSR,False,2,Red 3,False,0,0,0,0,0,0,1,0,2,12,1,5830,2,1,2,3,0,0,0
+False,None,Clogged on note,True,False,False,Wing,72,GAB,False,0,Red 1,False,0,0,0,0,0,0,3,2,0,0,1,8230,0,0,0,0,0,0,0
+True,None,Very fast and accurate speaker bot.,False,False,False,None,73,AK,False,0,Red 2,False,0,0,20,5,4,1,2,0,0,12,3,401,0,0,2,2,1,1,0
+False,None,ground intake was broken so used substation,False,True,False,Wing,74,AL,False,0,Blue 3,False,0,0,0,1,0,1,2,7,0,13,1,1885,0,0,4,2,2,0,0
+True,None,,False,False,False,None,75,GAB,False,0,Red 1,False,0,0,0,0,0,0,2,12,0,13,1,6194,0,0,0,2,0,2,0
+True,None,,False,True,False,Wing,76,Whw,False,0,Blue 2,False,0,0,0,0,0,0,1,12,0,13,1,9033,0,3,0,3,0,0,0
+True,None,"Went for defense even though good offense, ground intake, amp (?) and speaker shooting",True,False,False,Climb,77,GSR,False,0,Red 3,False,0,1,0,1,0,0,2,10,0,13,2,4967,0,2,2,4,1,1,0
+True,None,,False,True,False,Climb,78,AK,False,0,Red 2,False,0,0,0,1,0,1,2,0,0,13,2,4575,0,1,6,9,3,5,0
+False,None,only defense,False,False,False,Wing,79,AL,False,0,Blue 3,False,0,0,0,0,0,0,2,0,0,14,1,1793,0,0,0,0,0,0,0
+True,None,Note got jammed :(,False,False,False,None,80,GSR,False,0,Red 3,False,0,0,5,1,1,0,1,2,0,14,2,5724,0,0,2,2,1,1,0
+True,None,,False,True,False,Climb,81,Whw,False,0,Blue 2,False,0,0,5,1,1,0,1,0,0,14,1,4456,0,0,4,2,2,0,0
+True,None,Very consistent and reliable amp bot.,False,False,False,Climb,82,AK,False,0,Red 2,False,0,0,5,1,1,0,2,2,0,14,3,9003,5,0,5,5,0,0,0
+True,None,Swerve issues?,True,False,False,None,83,GAB,False,0,Red 1,False,0,0,0,0,0,0,2,0,0,14,2,141,0,0,2,1,1,0,0
+True,None,,False,False,False,None,84,MF,False,0,Blue 1,False,0,0,5,1,1,0,2,5,0,15,2,1629,0,0,8,4,4,0,0
+True,None,,False,True,False,None,85,Whw,False,0,Blue 2,False,0,0,10,2,2,0,2,5,0,15,3,449,1,2,7,6,3,0,0
+False,None,AMAZING OFFENSE,False,False,False,Wing,86,GSR,False,0,Red 3,False,0,0,15,3,3,0,2,0,0,15,3,9496,1,1,19,11,9,0,0
+False,None,Swerve issues?,True,False,False,Wing,87,GAB,False,0,Red 1,False,0,0,0,0,0,0,2,5,0,15,1,8230,0,0,0,0,0,0,0
+False,None,Consistent speaker bot.,False,False,False,Climb,88,AK,False,0,Red 2,False,0,0,0,0,0,0,3,0,0,15,2,3935,0,0,12,8,6,2,0
+True,None,If ground intake then not working,True,False,False,Wing,89,GSR,False,0,Red 3,False,0,0,0,1,0,1,2,10,0,16,2,1086,0,0,14,7,7,0,0
+True,None,Awesome,True,True,False,Wing,90,GAB,False,0,Red 1,False,0,0,0,1,0,1,3,29,0,16,3,4967,0,0,8,4,4,0,0
+False,None,,False,False,False,Climb,91,SC,False,0,Blue 1,False,0,0,0,0,0,0,2,29,0,16,2,1262,0,0,4,3,2,1,0
+True,None,"Very fast, consistent and versatile.",False,True,False,None,92,AK,False,0,Red 2,False,0,0,15,5,3,2,1,10,0,16,1,401,2,1,6,5,2,0,0
+True,None,,False,True,False,Wing,93,WHW,False,0,Blue 2,False,0,0,10,2,2,0,1,4,0,17,1,4575,0,0,6,4,3,1,0
+True,None,Slightly sketchy ground intake,False,False,False,None,94,GSR,False,0,Red 3,False,0,0,5,2,1,1,2,0,0,17,3,449,0,0,14,8,7,1,0
+False,None,Slow and uncontrollable,True,False,False,Wing,95,GAB,False,0,Red 1,False,0,0,0,0,0,0,1,2,0,14,1,9403,3,0,3,3,0,0,0
+False,None,Good amp weak speaker,True,True,False,Climb,96,SC,False,0,Blue 1,False,0,0,0,1,0,1,2,2,0,17,3,5804,7,1,7,10,0,2,0
+True,None,Very consistent speaker robot.,False,True,False,Climb,97,AK,False,0,Red 2,False,0,0,0,0,0,0,2,0,0,17,3,6802,0,0,12,7,6,1,0
+True,None,,True,True,True,Wing,98,WHW,False,0,Blue 2,False,0,0,5,1,1,0,1,1,0,18,1,4456,0,0,0,0,0,0,0
+False,None,Robot malfunctioned.,False,False,False,None,99,AK,False,0,Red 2,False,0,0,0,0,0,0,1,0,0,18,1,5830,0,0,0,0,0,0,0
+True,None,Very good and fast,False,True,False,Wing,100,IH,False,0,Blue 3,False,0,0,20,4,4,0,2,0,0,18,3,9496,1,0,15,9,7,1,0
+True,None,Something broken,False,False,False,None,101,GAB,False,0,Red 1,False,0,0,0,0,0,0,1,0,0,18,1,141,0,0,0,1,0,1,0
+False,None,Climb very early,True,True,False,Climb,102,SC,False,0,Blue 1,False,0,0,0,0,0,0,2,0,0,18,2,1262,0,0,4,3,2,1,0
+False,None,died at the end,False,False,True,None,103,AL,False,0,Red 1,False,0,0,0,0,0,0,1,0,0,18,1,141,0,0,0,0,0,0,0
+False,None,,False,False,False,Wing,104,EJH,False,0,Red 3,False,0,0,0,1,0,1,2,0,0,19,2,1885,0,0,6,4,3,1,0
+True,None,notes did not fly straight,False,False,False,Wing,105,AL,False,0,Red 1,False,0,0,0,0,0,0,1,0,0,19,1,6189,0,0,0,4,0,4,0
+True,None,,True,True,False,Wing,106,WHW,False,0,Blue 2,False,0,0,0,1,0,1,1,8,0,19,1,3939,0,0,12,6,6,0,0
+True,None,Somewhat consistent. Tried to shoot speaker but could not.,False,False,False,None,107,AK,False,0,Red 2,False,0,0,0,0,0,0,2,7,0,19,2,977,2,0,2,3,0,1,0
+True,None,No aim and bad driving,False,False,False,Wing,108,GAB,False,0,Red 1,False,0,0,0,0,0,0,2,8,0,19,1,6189,0,0,0,4,0,4,0
+True,None,Slow handoff,False,True,False,Wing,109,SC,False,0,Blue 1,False,0,0,0,0,0,0,2,8,0,19,2,3361,0,0,4,5,2,3,0
+True,None,Decent robot,False,False,False,Climb,110,GAB,False,0,Red 1,False,0,0,5,1,1,0,2,0,0,20,2,6802,3,0,5,4,1,0,0
+True,None,,True,True,False,Wing,111,SC,False,0,Blue 1,False,0,0,0,0,0,0,2,0,0,20,2,9033,0,0,6,3,3,0,0
+False,None,amp focus,False,True,False,Climb,112,al,False,0,Red 1,False,0,0,5,1,1,0,1,0,0,20,2,6802,2,0,6,4,2,0,0
+True,None,,True,True,False,Climb,113,WHW,False,0,Blue 2,False,0,0,5,2,1,1,1,3,0,20,1,401,3,0,5,4,1,0,0
+True,None,"Mostly consistent, moderate speed.",False,False,False,Climb,114,AK,False,0,Red 2,False,0,0,10,2,2,0,2,0,0,20,2,4575,0,0,6,3,3,0,0
+False,None,Good defense but nothing else,False,False,False,Wing,115,GAB,False,2,Red 1,False,0,0,0,0,0,0,3,5,2,21,1,8230,0,0,0,0,0,0,0
+True,None,"Heavily defended, somewhat slow",False,True,False,Climb,116,Je,False,2,Red 3,False,0,0,5,1,1,0,2,10,2,21,2,9003,2,0,4,3,1,0,0
+True,None,Sad.,False,True,False,Climb,117,AK,False,0,Red 2,False,0,0,0,0,0,0,2,10,0,21,2,1086,0,0,6,6,3,3,0
+True,None,"Very fast and consistent, good aim.",False,True,False,Climb,118,AK,False,0,Red 2,False,0,0,10,2,2,0,1,5,0,22,1,1629,0,0,14,8,7,1,0
+True,None,disconnected temporarily,False,True,False,Climb,119,SC,False,0,Blue 1,False,0,0,0,0,0,0,1,12,0,22,2,5724,0,0,4,5,2,3,0
+True,None,Amp bot primarily,False,False,False,Climb,120,GAB,False,0,Red 1,False,0,0,5,1,1,0,2,12,0,22,2,3939,4,0,4,4,0,0,0
+True,None,Carried its team,True,False,False,None,121,GAB,False,0,Red 1,False,0,0,0,1,0,1,2,0,0,23,2,1885,0,0,8,4,4,0,0
+True,None,,False,True,False,Climb,122,AK,False,0,Red 2,False,0,0,5,1,1,0,2,2,0,23,2,9003,5,0,5,5,0,0,0
+True,None,,False,True,False,Climb,123,WHW,True,0,Red 3,False,0,0,0,0,0,0,2,0,0,24,1,5830,0,0,0,0,0,0,0
+True,None,It stopped working in the middle.,False,True,True,None,124,AK,False,0,Red 2,False,0,0,0,1,0,1,1,10,0,24,1,4575,0,0,6,3,3,0,0
+True,None,"Very fast, very good aim, very versatile.",False,True,False,Climb,125,AK,False,0,Red 1,False,0,0,10,2,2,0,1,0,0,25,1,449,2,0,14,10,6,2,0
+False,None,No ground intake,False,True,False,Climb,126,SC,False,0,Red 3,False,0,0,5,1,1,0,2,0,0,25,2,4456,0,0,6,3,3,0,0
+True,None,Bad driver control,False,True,False,Wing,127,GAB,False,0,Red 1,False,0,0,0,0,0,0,2,2,0,25,2,3361,0,0,4,2,2,0,0
+True,None,Very simple bot from a first glance. Kinda bad drivers(?),False,True,False,None,128,Dj,False,0,Blue 2,False,0,0,0,1,0,1,1,2,0,25,1,6189,0,0,0,2,0,2,0
+True,None,Looks like it could do speaker and has under bumper intake,False,False,False,Climb,129,AM,False,0,Blue 3,False,0,0,0,0,0,0,2,0,0,25,2,9403,4,0,4,4,0,0,0
+True,None,"Balance issues, very fast",False,True,False,Wing,130,WHW,False,0,Blue 2,False,0,0,10,2,2,0,1,5,0,26,2,4575,0,0,6,3,3,0,0
+True,None,No shooter so resorted to good defense,False,True,False,Wing,131,GAB,False,0,Red 1,False,0,0,0,0,0,0,3,5,0,26,2,6194,0,0,2,1,1,0,0
+True,None,Very fast and very accurate.,False,False,False,None,132,AK,False,0,Red 1,False,3,1,6,4,0,0,2,0,0,26,3,401,1,0,11,7,5,1,0
+True,None,Cracked driver good at avoiding defense,False,True,False,Wing,133,SC,False,0,Red 1,False,0,0,0,0,0,0,2,5,0,26,3,9496,0,0,20,10,10,0,0
+False,None,Defense only,False,False,False,Wing,134,AM,False,0,Blue 3,False,0,0,0,0,0,0,3,0,0,26,1,1793,0,1,0,1,0,0,0
+True,None,Very fast,False,True,False,Wing,135,AM,False,0,Blue 3,False,0,0,15,3,3,0,2,0,0,27,2,1629,0,0,18,10,9,1,0
+True,None,,False,True,False,Climb,136,WHW,False,0,Blue 2,False,0,0,5,1,1,0,2,0,0,26,2,977,2,0,4,3,1,0,0
+True,None,Sadly garbage,False,True,False,Wing,137,GAB,False,0,Red 1,False,0,0,0,3,0,3,1,0,0,27,1,6189,0,0,0,0,0,0,0
+False,None,Bot was not on field to play,False,False,False,None,138,AQ,True,0,Blue 1,False,0,0,0,0,0,0,1,0,0,27,1,4967,0,0,0,0,0,0,0
+False,None,,True,False,False,None,139,SC,False,0,Red 3,False,0,0,5,1,1,0,2,5,0,27,3,5804,7,0,11,10,2,1,0
+True,None,Very fast and consistent with the speaker.,False,False,False,None,140,AK,False,0,Red 2,False,0,0,10,2,2,0,2,0,0,27,3,449,0,0,14,8,7,1,0
+False,None,Had trouble with human note insert could be because of our bot being dead tho,False,True,False,Wing,141,AM,False,0,Blue 3,False,0,0,0,0,0,0,2,0,0,28,2,1885,0,1,2,4,1,2,0
+False,None,Died for 90 percent of the match,False,True,True,Wing,142,GAB,False,0,Red 1,False,0,0,0,0,0,0,1,0,0,28,1,8230,0,0,0,0,0,0,0
+True,None,just stopped at 1:30-ish??? accidentally(?),False,True,True,Wing,143,dj,False,0,Blue 2,False,0,1,5,2,1,0,1,0,0,28,1,4967,0,1,2,2,1,0,0
+True,None,RIP.,False,False,True,None,144,AK,False,0,Red 2,False,0,0,5,1,1,0,1,10,0,28,1,3361,0,0,4,4,2,2,0
+True,None,"Very passive playing, trouble intaking (missed intake 5 times) shooting wobbles more than intended",False,True,False,Climb,145,AQ,False,0,Blue 1,False,0,0,0,0,0,0,1,4,0,28,2,1086,0,0,12,7,6,1,0
+True,None,"Very consistent speaker bot, moderate speed.",False,False,False,Climb,146,AK,False,0,Red 2,False,0,0,5,1,1,0,2,7,0,29,3,6802,0,0,12,6,6,0,0
+True,None,Great shooter highly accurate,False,False,False,Wing,147,GAB,False,0,Red 1,False,0,0,0,0,0,0,1,7,0,29,1,9033,0,0,14,7,7,0,0
+True,None,"Trouble operating, bot moved at extremely low speeds in auto and spun around during teleop before shooting a note out of stage, leading to pre 30 second climb",False,False,False,Climb,148,AQ,False,2,Blue 1,False,0,0,0,0,0,0,1,0,2,29,1,141,0,0,0,1,0,1,0
+False,None,Over bumper intake and fast pickup of notes,False,False,False,Climb,149,AM,False,3,Blue 3,False,0,0,0,0,0,0,2,7,3,29,2,1262,0,0,8,4,4,0,0
+True,None,"variable shooter!!! clumsy, by that may be drivers",False,True,False,Climb,150,dj,False,0,Blue 2,False,0,0,5,1,1,0,2,0,0,29,3,4456,0,0,10,5,5,0,0
+False,None,Bot was not on field due to repairs being done to base of the bot,False,False,False,None,151,AQ,True,0,Blue 1,False,0,0,0,0,0,0,1,0,0,30,1,5830,0,0,0,0,0,0,0
+True,None,,False,False,False,Wing,152,SC,False,0,Red 3,False,0,0,15,3,3,0,2,9,0,30,3,1629,0,0,26,13,13,0,0
+True,None,Under bumper intake,False,True,False,Climb,153,AM,False,0,Blue 3,False,0,0,5,1,1,0,2,2,0,30,2,3939,2,1,6,5,2,0,0
+False,None,Not much scoring but very good defense.,False,True,False,None,154,AK,False,0,Red 2,False,0,0,0,0,0,0,3,2,0,30,1,1793,0,1,0,1,0,0,0
+True,None,Shooter finally worked,False,False,False,Wing,155,GAB,False,0,Red 1,False,0,0,0,0,0,0,1,2,0,30,2,6189,0,0,4,4,2,2,0
+True,None,"their under-the-bump intake only has a very small gap, so they have to position themselves carefully (and slow down a bit)",False,True,False,Climb,156,dj,False,0,Blue 2,False,0,0,5,1,1,0,3,3,0,30,2,3939,3,0,7,5,2,0,0
+True,None,Issues maybe,False,False,False,Wing,157,GAB,False,0,Red 1,False,0,0,0,0,0,0,1,0,0,31,2,3361,0,0,4,3,2,1,0
+True,None,NA,False,False,False,Climb,158,KS,False,0,Blue 3,False,0,0,0,0,0,0,2,0,0,31,2,5724,0,0,8,5,4,1,0
+True,None,,False,True,False,Climb,159,SC,False,0,Red 3,False,0,0,0,1,0,1,2,0,0,31,2,5804,3,1,7,7,2,1,0
+True,None,"Less accurate than normal, but still a good performance.",False,True,False,None,160,AK,False,0,Red 2,False,0,0,5,1,1,0,1,0,0,31,1,977,2,0,6,5,2,1,0
+True,None,defense is 3 because they rammed into a bit and budged maybe an inch,False,True,False,None,161,dj,False,0,Blue 2,False,0,0,20,4,4,0,3,0,0,31,3,9496,0,0,16,8,8,0,0
+True,None,"Had trouble lining up shooter to amp, was guarded constantly and did not manage to climb after several attempts",False,True,False,Wing,162,AQ,False,0,Blue 1,False,0,0,5,1,1,0,1,0,0,31,1,6802,3,1,5,5,1,0,0
+True,None,"Died in the middle, was disabled after a crash with two robots.",False,True,True,Climb,163,AK,False,0,Red 1,False,0,0,5,1,1,0,2,5,0,32,2,4456,0,0,2,2,1,1,0
+False,None,Same problem as before this is puzzling,False,False,True,None,164,GAB,False,0,Red 1,False,0,0,0,0,0,0,1,5,0,32,1,8230,0,0,0,0,0,0,0
+False,None,Kinda just struggles with life,False,False,False,Wing,165,AM,False,0,Blue 3,False,0,0,5,1,1,0,2,5,0,32,2,3939,1,0,7,5,3,1,0
+True,None,Was unable to shoot all of teleop due to note being stuck in intake and wasn't able to remove it so they resorted to guarding source and were blocked off when on red alliance side,False,True,False,Wing,166,AQ,False,0,Blue 1,False,0,0,0,1,0,1,2,0,0,32,1,6194,0,0,0,0,0,0,0
+False,None,Super fast climb again seems to have connection issues,True,False,False,Climb,167,SC,False,0,Red 3,False,0,0,0,0,0,0,1,7,0,33,1,141,0,0,2,1,1,0,0
+True,None,I think in other matches and this one every so often the shooter becomes weak,False,False,False,Wing,168,AM,False,0,Blue 3,False,0,0,0,2,0,2,2,4,0,33,2,4967,0,0,10,7,5,2,0
+True,None,Slow shooter,True,True,True,None,169,GAB,False,0,Red 1,False,0,0,0,0,0,0,2,4,0,33,2,4575,0,0,6,4,3,1,0
+True,None,"Very fast, yet slightly vulnerable to defense.",False,True,False,Climb,170,AK,False,0,Red 1,False,0,0,15,3,3,0,1,4,0,33,1,401,1,0,5,3,2,0,0
+True,None,"bad drivers. also, i think the wheels are in coast brake mode???",True,True,False,None,171,dj,False,0,Blue 2,False,0,0,0,0,0,0,1,4,0,33,1,9403,2,0,2,2,0,0,0
+True,None,"Failed to climb as was out of time, high scoring compared to other matches, played more aggressive than most of their team, very reckless and knocked teammates off balance when lining up for speaker",True,False,False,Wing,172,AQ,False,0,Blue 1,False,0,0,0,0,0,0,1,4,0,33,2,1086,0,0,20,10,10,0,0
+False,None,NA,False,False,False,None,173,AM,True,0,Blue 3,False,0,0,0,0,0,0,1,0,0,34,1,3939,0,0,0,0,0,0,0
+True,None,"Very consistent with the speaker, moderately fast.",False,True,False,Climb,174,AK,False,0,Red 2,False,0,0,5,2,1,1,1,7,0,34,1,6802,0,0,10,5,5,0,0
+False,None,Indexing issues,True,False,False,Wing,175,GAB,False,0,Red 1,False,0,0,0,0,0,0,2,7,0,34,2,1262,0,0,6,5,3,2,0
+False,None,Close to climbing,False,False,False,None,176,SC,False,0,Red 3,False,0,0,0,1,0,1,1,0,0,34,1,5830,0,0,0,0,0,0,0
+True,None,"Was not able to play for more than half of teleop due to note getting stuck on battery, issues with amp shooting mechanism not aligning correctly",False,False,False,Wing,177,AQ,False,0,Blue 1,False,0,0,0,0,0,0,1,0,0,34,1,9033,0,2,2,3,1,0,0
+True,None,defense is 3 because this bot seems stronger than other and will push opponents very well,False,True,False,None,178,dj,False,0,Blue 2,False,0,0,0,1,0,1,3,0,0,34,1,6194,0,0,0,0,0,0,0
+False,None,ground intake still broken,False,False,False,Wing,179,AL,False,0,Red 2,False,0,0,5,1,1,0,2,7,0,35,1,1885,0,0,4,4,2,2,0
+True,None,iffy driver and shooter,False,True,False,Climb,180,dj,False,0,Blue 2,False,0,0,5,1,1,0,1,0,0,35,1,5724,0,0,10,9,5,4,0
+True,None,Terrible driving,True,False,False,Wing,181,GAB,False,0,Red 1,False,0,0,0,0,0,0,1,0,0,35,2,6189,0,0,4,2,2,0,0
+True,None,Looked to have connection issues,False,False,False,Climb,182,SC,False,0,Red 3,False,0,0,10,3,2,1,2,7,0,35,1,4456,0,0,2,1,1,0,0
+False,None,Got Amp jammed and didnt know what to do with themselves,False,False,False,Wing,183,AM,False,0,Blue 3,False,0,0,5,1,1,0,2,0,0,35,2,977,0,2,2,4,1,1,0
+True,None,"Had issues to land shots, did not attempt to intake once, was guarded more than it defended",False,True,False,Wing,184,AQ,False,0,Blue 1,False,0,0,0,0,0,0,1,0,0,35,2,9003,0,0,0,2,0,2,0
+True,None,Powerful shooter the bot itself is fast,False,True,False,Climb,185,AM,False,0,Blue 3,False,0,0,0,2,0,2,2,15,0,36,3,1629,0,0,14,7,7,0,0
+True,None,good at evading defenders,False,True,False,None,186,dj,False,0,Blue 2,False,0,9,5,11,1,1,2,15,0,36,3,1629,0,0,14,8,7,1,0
+False,None,"Was unable to shoot still, stuck around stage and defended right side of it, not much movement done",False,False,False,None,187,AQ,False,0,Blue 1,False,0,0,0,0,0,0,2,15,0,36,1,8230,0,0,0,0,0,0,0
+True,None,"Played very passive, shooter doesn't have much power, was guarded constantly, and had minor intaking issues",True,True,False,Wing,188,AQ,False,0,Blue 1,False,0,0,0,0,0,0,1,0,0,37,1,3361,0,0,6,4,3,1,0
+False,None,Was able to strategize on the fly and had a really good offensive and good flexibility,True,True,False,Wing,189,AM,False,0,Blue 3,False,0,0,0,0,0,0,2,0,0,37,3,449,2,0,12,7,5,0,0
+False,None,Lots of penalties when playing defense hella fast climb,True,True,False,Climb,190,SC,False,0,Red 3,False,0,0,5,1,1,0,2,15,0,37,2,5804,3,0,5,4,1,0,0
+True,None,Died but made it back,False,False,True,Climb,191,MF,False,0,Red 1,False,0,0,0,0,0,0,1,15,0,37,1,141,0,0,0,0,0,0,0
+True,None,Consistent but slightly slow,False,True,False,None,192,AK,False,0,Red 1,False,0,0,0,0,0,0,1,15,0,37,1,9033,0,0,8,4,4,0,0
+True,None,how they aim the shooter is a myatery but they can aim from ANY angle accurately,True,True,False,None,193,dj,False,0,Blue 2,False,0,0,15,3,3,0,2,0,0,37,3,401,0,0,14,7,7,0,0
+False,None,NA,False,False,False,None,194,AM,True,0,Blue 3,False,0,0,0,0,0,0,1,0,0,38,1,9496,0,0,0,0,0,0,0
+False,None,Played almost only defense,False,False,False,Wing,195,SC,False,0,Red 3,False,0,0,0,0,0,0,2,10,0,38,1,6194,0,1,0,1,0,0,0
+True,None,Intake failed; note stuck inside so resorted to heavy defending nearing stage zone,False,False,False,Wing,196,AQ,False,0,Red 1,False,0,0,0,0,0,0,3,10,0,38,1,6194,0,0,0,0,0,0,0
+False,None,Moderately fast,False,True,False,Climb,197,AK,False,0,Red 1,False,0,0,0,0,0,0,2,0,0,38,2,1262,0,0,8,7,4,3,0
+False,None,xannot intake from loading dock even though its designed to,False,False,False,Wing,198,dj,False,0,Blue 2,False,0,0,0,0,0,0,1,10,0,38,1,1885,0,0,2,2,1,1,0
+False,None,NA,False,False,False,None,199,AM,False,0,Blue 3,False,0,0,0,0,0,0,1,0,0,39,1,5804,0,0,0,0,0,0,0
+True,None,Overall decent team,False,True,False,Wing,200,GAB,False,0,Blue 2,False,0,0,5,1,1,0,2,2,0,39,2,4456,0,0,8,4,4,0,0
+True,None,teleop started and they began spinning rapidly before estop,False,False,True,None,201,AL,False,0,Red 2,False,0,0,0,1,0,1,1,2,0,39,1,3939,0,0,0,0,0,0,0
+False,None,drivers seem confused,False,True,False,None,202,dj,False,0,Blue 2,False,0,0,0,0,0,0,1,5,0,39,1,1793,0,0,4,2,2,0,0
+False,None,Intake looked broken,False,False,False,None,203,SC,False,0,Red 3,False,0,0,0,0,0,0,1,2,0,-1,2,1086,0,0,4,3,2,1,0
+True,None,"Passive movement, focused on getting notes shot to speaker, minor intake issues and no defending",False,False,False,Wing,204,AQ,False,0,Red 1,False,0,0,0,0,0,0,1,2,0,39,1,9033,0,0,16,9,8,1,0
+True,None,,True,False,False,None,205,SC,False,0,Red 3,False,0,0,0,0,0,0,1,5,0,40,1,9403,3,0,3,3,0,0,0
+False,None,Fast bot and over bumper intake,False,False,False,Climb,206,AM,False,0,Blue 3,False,0,0,0,0,0,0,2,0,0,40,2,1262,0,0,10,6,5,1,0
+True,None,"Very poor performance half of the match; intake issues (note stuck), was defended and ran around in search of notes most of teleop",True,True,False,None,207,AQ,False,0,Red 1,False,0,0,0,0,0,0,1,5,0,40,1,3361,0,0,8,7,4,3,0
+False,None,note went *woosh*,False,False,False,Climb,208,AL,False,0,Red 2,False,0,0,0,0,0,0,1,5,0,40,1,5830,1,0,1,3,0,2,0
+False,None,starts with amp shooter preloaded. wasted a LOT of time. iffy intake,False,True,False,Climb,209,dj,False,0,Blue 2,False,0,0,0,0,0,0,2,0,0,40,1,9003,2,0,4,3,1,0,0
+False,None,Got hit by teammate and made them miss,False,False,False,None,210,DC,False,0,Blue 2,False,0,0,5,1,1,0,2,5,0,40,2,4575,0,0,6,6,3,3,0
+True,None,Very slay and emo,False,False,False,Wing,211,AM,False,0,Blue 3,False,0,0,15,3,3,0,2,0,0,41,2,9496,0,0,14,7,7,0,0
+False,None,Was slow when getting notes from human player,False,False,False,Wing,212,DC,False,0,Blue 2,False,0,0,0,0,0,0,1,0,0,41,2,6189,0,0,4,3,2,1,0
+True,None,"pretty good, but they just stopped in the last ~45 seconds and sat there",False,True,True,None,213,dj,False,0,Blue 2,False,0,0,0,0,0,0,2,0,0,41,3,4967,0,0,14,8,7,1,0
+False,None,"Took hold of 1 note and very heavily defended source on red alliance side, no shots fired, mobility was not too quick",False,False,False,Wing,214,AQ,False,0,Red 1,False,0,0,0,0,0,0,3,0,0,41,1,8230,0,0,0,0,0,0,0
+False,None,Seemed chill,False,False,False,Climb,215,AM,False,0,Blue 3,False,1,0,2,1,0,0,2,2,0,42,2,977,0,0,6,4,3,1,0
+True,None,shooter arm malfunctioned 30 second into teleport so they killed it,False,True,True,Climb,216,dj,False,0,Blue 2,False,0,0,5,1,1,0,1,1,0,42,1,1086,0,0,2,1,1,0,0
+True,None,"Extremely poor performance, nothing done during teleop, disabled close to last 30 seconds",True,False,True,None,217,AQ,False,0,Red 1,False,0,0,0,0,0,0,1,2,0,42,1,141,0,0,0,0,0,0,0
+True,None,Had a really good auto,True,False,False,None,218,DC,False,0,Blue 2,False,0,0,20,4,4,0,2,2,0,42,3,449,4,0,8,9,2,3,0
+False,None,NA,False,False,False,None,219,AM,True,0,Blue 3,False,0,0,0,0,0,0,1,0,0,43,1,4967,0,0,0,0,0,0,0
+False,None,,False,False,False,None,221,CH,True,0,Red 3,False,0,0,0,0,0,0,2,0,0,43,2,5804,0,0,0,0,0,0,0
+False,None,Was very consistent in shooting into speaker,True,False,False,Climb,222,DC,False,2,Blue 2,False,0,0,0,0,0,0,1,0,2,43,3,1262,0,0,10,5,5,0,0
+True,None,Inefficient handoff mechanism,False,False,False,Wing,223,GAB,False,0,Red 2,False,0,0,0,1,0,1,2,25,0,43,2,6194,0,0,2,2,1,1,0
+False,None,STAGS<3 but also could climb with another robot!!!,False,True,False,Climb,224,dj,False,2,Blue 2,False,0,0,0,0,0,0,2,25,2,43,3,1262,0,0,14,7,7,0,0
+True,None,Was pinned for penalty points,False,False,False,None,225,SC,False,0,Blue 1,False,0,0,0,0,0,0,2,25,0,43,2,3361,0,0,8,4,4,0,0
+True,None,"Minor issues at start of teleop, bad intaking, no defence displayed",False,False,False,Wing,226,AQ,False,0,Red 1,False,0,0,0,0,0,0,1,0,0,43,1,1793,0,0,4,3,2,1,0
+False,None,Turned into a defense bot halfway through the match,False,False,False,Wing,227,DC,False,0,Blue 2,False,0,0,10,3,2,1,3,0,0,44,2,449,1,1,1,2,0,0,0
+True,None,"Did not accomplish anything during teleop, controls were jammed and bot was not cooperating with driver. Faulty pneumatics",False,False,False,Wing,228,AQ,False,0,Red 1,False,0,0,0,0,0,0,1,0,0,44,1,141,0,0,0,0,0,0,0
+True,None,,False,False,False,Climb,229,SC,False,0,Blue 1,False,0,0,0,0,0,0,2,5,0,44,2,5724,0,0,8,9,4,5,0
+True,None,Got a note stuck in it and went on a pretty meh defense,False,False,False,Wing,230,AM,False,0,Blue 3,False,0,0,10,3,2,1,2,5,0,44,2,449,1,0,1,1,0,0,0
+True,None,Awesome offense,False,True,False,None,231,GAB,False,0,Red 2,False,0,0,10,2,2,0,2,5,0,44,3,9496,0,0,20,11,10,1,0
+True,None,,False,True,False,Climb,232,Whw,False,0,Red 3,False,0,0,5,1,1,0,1,2,0,44,1,4575,0,0,8,6,4,2,0
+False,None,Lovely would creeply stare at again,False,False,False,Climb,233,AM,False,0,Blue 3,False,0,0,0,0,0,0,2,0,0,45,2,977,1,0,7,5,3,1,0
+True,None,Can shoot from really far,True,True,False,Wing,234,DC,False,0,Blue 2,False,0,0,20,5,4,1,2,2,0,45,3,401,0,0,10,6,5,1,0
+True,None,Awesome offense,True,True,False,Climb,235,GAB,False,0,Red 2,False,0,0,0,1,0,1,2,0,0,45,2,6802,4,0,4,4,0,0,0
+False,None,"Very slow movement during teleop, attempted to grab notes and defend but was shoved around by bigger bots instead",False,True,False,Wing,236,AQ,False,0,Red 1,False,0,0,0,0,0,0,1,7,0,45,1,1885,0,0,2,1,1,0,0
+True,None,"bumped into the stage a few times, missed a few times",False,True,False,None,237,dj,False,0,Blue 2,False,0,0,5,2,1,1,2,0,0,45,3,401,0,0,10,6,5,1,0
