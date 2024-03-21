@@ -1341,12 +1341,14 @@
               name: "Scouter Initials",
               type: "text",
               config: true,
+              required: true,
             },
             {
               key: "matchNumber",
               name: "Match Number",
               type: "number",
               config: true,
+              require: true,
             },
             {
               key: "p",
@@ -1359,6 +1361,7 @@
               name: "Team Number",
               type: "number",
               config: true,
+              require: true,
             },
             {
               key: "n",
@@ -1625,6 +1628,7 @@
                 value.min = "0";
                 value.max = "69420";
                 value.dataset.count = "0";
+                value.required = true;
 
                 let add = document.createElement("button");
                 add.innerText = "+";

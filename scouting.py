@@ -202,5 +202,5 @@ while True:
                 data['pitScouting']['gearRatio'],
             
         ))
-    #cur.connection.commit()
+    cur.connection.commit()
     

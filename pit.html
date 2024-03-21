@@ -1340,6 +1340,7 @@
               name: "Scouter Initials",
               type: "text",
               config: true,
+              required: true,
             },
             {
               key: "p",
@@ -1351,6 +1352,7 @@
               key: "t",
               name: "Team Number",
               type: "number",
+              required: true,
               config: true,
             },
           ],
@@ -1392,12 +1394,14 @@
               key: "shootingDistance",
               name: "Shooting Distance in Feet",
               type: "number",
+              required: true,
               config: true,
             },
             {
               key: "autos",
               name: "Autos (Max # of Pieces Consistently)",
               type: "number",
+              required: true,
               config: true,
             },
             {
@@ -1416,6 +1420,7 @@
               key: "speed",
               name: "Estimated Speed",
               type: "number",
+              required: true,
               config: true,
             },
             {
@@ -1434,6 +1439,7 @@
               name: "Drive Motors",
               type: "number",
               config: true,
+              required: true,
             },
             {
               key: "gearRatio",
@@ -1544,6 +1550,7 @@
                 value.min = "0";
                 value.max = "69420";
                 value.dataset.count = "0";
+                value.required = true;
 
                 let add = document.createElement("button");
                 add.innerText = "+";
@@ -1630,11 +1637,6 @@
 
         popupWindow.style.display = "inline";
         popupWindow.style.margin = "5px";
-
-        for (let i = 0; i < children.length; i++) {
-          child = children[i];
-          child.style.width = "500px";
-        }
 
         if (clearInputs !== undefined) {
           if (clearInputs === true) {
