@@ -86,58 +86,56 @@ while True:
         print(f"Data: {data}")
     settext(data)
 
-    if data.get('tele', {}).get('a'):
+
+    if data.get('tele', {}).get('tt'):
         print("stand scouting")
+        print((data['auto']['a']), int(data['auto']['a']))
         cur.execute(
             """
             INSERT INTO stand_scouting 
             (
-            automobile,
-            card,
-            comments,
-            coop,
-            defended,
-            dies,
-            end_position,
             initals,
-            no_show,
-            spotlight,
+            match_number,
             start_position,
-            tipped,
+            teamnum,
+            no_show,
+            automobile,
             auto_amp,
             auto_amp_miss,
-            auto_note_score,
-            auto_pieces,
             auto_speaker,
             auto_speaker_miss,
-            defense,
-            foul,
-            harmony,
-            match_number,
-            offense,
-            teamnum,
+            coop,
             tele_amp,
             tele_amp_miss,
-            tele_note_score,
-            tele_pieces,
             tele_speaker,
             tele_speaker_miss,
-            trap
+            trap,
+            end_position,
+            harmony,
+            spotlight,
+            offense,
+            defense,
+            died,
+            tipped,
+            defended,
+            card,
+            foul,
+            comments
             ) VALUES (
-                %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s
+                %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s
             )""", 
             (
                 data['pre']['i'],        # initials
                 int(data['pre']['matchNumber']),   # matchnum
                 data['pre']['p'],        # startpos
                 int(data['pre']['t']),   # teamnum
-                int(data['pre']['n']),   # noshow
-                int(data['auto']['m']),  # automobile
+                data['pre']['n'],   # noshow
+                data['auto']['m'],  # automobile
                 int(data['auto']['A']),  # autoamp
                 int(data['auto']['a']),  # autoampmiss
                 int(data['auto']['S']),  # autospeaker
                 int(data['auto']['s']),  # autospeakermiss
-                int(data['tele']['cc']),  # coop
+                data['tele']['cc'],  # coop
                 int(data['tele']['AA']),  # teleamp
                 int(data['tele']['am']),  # teleampmiss
                 int(data['tele']['SS']),  # telespeaker
@@ -148,9 +146,9 @@ while True:
                 data['end']['a'],        # spotlight
                 int(data['post']['o']),  # offence
                 int(data['post']['d']),  # defence
-                int(data['post']['D']),  # died
-                int(data['post']['t']),  # tipped
-                int(data['post']['w']),  # defended
+                data['post']['D'],  # died
+                data['post']['t'],  # tipped
+                data['post']['w'],  # defended
                 data['post']['c'],       # card
                 int(data['post']['f']),  # foul
                 data['post']['C']        # comments
