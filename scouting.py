@@ -1,5 +1,4 @@
 import tkinter
-import sqlite3
 import psycopg
 
 from cv2 import VideoCapture, flip, cvtColor, COLOR_BGR2RGBA
@@ -9,7 +8,6 @@ from qreader import QReader
 import json
 
 keys = []
-
 
 def keydown(event):
     keys.append(event.keysym)
