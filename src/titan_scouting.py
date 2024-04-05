@@ -2,6 +2,7 @@ import tkinter
 from cv2 import VideoCapture, flip, cvtColor, COLOR_BGR2RGBA
 from PIL import ImageTk, Image
 from qreader import QReader
+from time import sleep
 
 keys = []
 
@@ -33,6 +34,9 @@ if not camera.isOpened():
 
 root.clipboard_clear()
 
+data = None
+shouldRead = True
+
 while True:
     while True:
         errors, image = camera.read()
@@ -51,11 +55,25 @@ while True:
         if 'q' in keys or 'Escape' in keys:
             quit()
 
-        if 'space' in keys or 'Return' in keys:
+        # if 'space' in keys or 'Return' in keys:
+        #     break
+
+        try:
+            decoder.detect(image=image)[0]
             break
+        except IndexError:
+            continue
 
     try:
-        data = decoder.detect_and_decode(image=image)[0]
+        if decoder.detect_and_decode(image=image)[0] == data:
+            continue
+        else:
+            if shouldRead :
+                data = decoder.detect_and_decode(image=image)[0]
+                print("Data copied to clipboard!")
+            else:
+                continue
+
     except IndexError:
         print("No QR Code detected, please scan again")
         settext("No QR Code detected, please scan again")
@@ -67,4 +85,4 @@ while True:
         continue
     
     root.clipboard_append(f"{data}")
-    print(root.clipboard_get())
+    #print(root.clipboard_get())
