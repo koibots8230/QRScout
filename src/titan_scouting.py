@@ -1,8 +1,6 @@
 import tkinter
-from cv2 import VideoCapture, flip, cvtColor, COLOR_BGR2RGBA
+import cv2
 from PIL import ImageTk, Image
-from qreader import QReader
-from time import sleep
 
 keys = []
 
@@ -14,8 +12,8 @@ def keyup(event):
     keys.remove(event.keysym)
 
 
-decoder = QReader()
-camera = VideoCapture(0)
+decoder = cv2.QRCodeDetector()
+camera = cv2.VideoCapture(0)
 root = tkinter.Tk()
 root.bind("<KeyPress>", keydown)
 root.bind("<KeyRelease>", keyup)
@@ -35,14 +33,22 @@ if not camera.isOpened():
 root.clipboard_clear()
 
 data = None
-shouldRead = True
+lastData = None
+loops = 0
+
+settext("")
 
 while True:
     while True:
+        loops += 1
+        
+        if loops == 150:
+            settext("")
+
         errors, image = camera.read()
 
-        display_image = flip(image, 1)
-        display_image = cvtColor(display_image, COLOR_BGR2RGBA)
+        display_image = cv2.flip(image, 1)
+        display_image = cv2.cvtColor(display_image, cv2.COLOR_BGR2RGBA)
         display_image = Image.fromarray(display_image)
         display_image = display_image.resize((display_image.size[0]//3, display_image.size[1]//3))
         display_image = ImageTk.PhotoImage(display_image)
@@ -55,34 +61,33 @@ while True:
         if 'q' in keys or 'Escape' in keys:
             quit()
 
-        # if 'space' in keys or 'Return' in keys:
-        #     break
-
         try:
-            decoder.detect(image=image)[0]
+            decoder.detect(image)[0]
             break
         except IndexError:
             continue
 
+
     try:
-        if decoder.detect_and_decode(image=image)[0] == data:
+        if decoder.detectAndDecode(image)[0] == lastData:
             continue
         else:
-            if shouldRead :
-                data = decoder.detect_and_decode(image=image)[0]
-                print("Data copied to clipboard!")
+            data = decoder.detectAndDecode(image)[0]
+            if data == lastData:
+                continue;
             else:
-                continue
+                lastData = data
+                loops = 0
+                settext("Data copied to clipboard!")
 
     except IndexError:
-        print("No QR Code detected, please scan again")
-        settext("No QR Code detected, please scan again")
+        #settext("No QR Code detected, please scan again")
         continue
 
     if not data:
-        print("QR Code is unreadable, please scan again")
-        settext("QR Code is unreadable, please scan again")
+        #settext("QR Code is unreadable, please scan again")
         continue
     
     root.clipboard_append(f"{data}")
     #print(root.clipboard_get())
+
