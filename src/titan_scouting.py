@@ -79,6 +79,7 @@ while True:
                 lastData = data
                 loops = 0
                 settext("Data copied to clipboard!")
+                settext(f"\n{data}")
 
     except IndexError:
         #settext("No QR Code detected, please scan again")
@@ -87,7 +88,7 @@ while True:
     if not data:
         #settext("QR Code is unreadable, please scan again")
         continue
-    
+    root.clipboard_clear()    
     root.clipboard_append(f"{data}")
     #print(root.clipboard_get())
 
