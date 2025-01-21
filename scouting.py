@@ -41,19 +41,23 @@ cur.execute(
     "teamnum INT, "
     "noshow BIT, "
     "automobile BIT, "
-    "autoamp BIT, "
-    "autoampmiss INT, "
-    "autospeaker INT, "
-    "autospeakermiss INT, "
+    "autoL1 INT, "
+    "autol1miss INT, "
+    "autoL2 INT, "
+    "autol2miss INT, "
+    "autoL3 INT, "
+    "autol3miss INT, "
+    "autoL4 INT, "
+    "autol4miss INT, "
+    "autoprocessor INT, "
     "coop BIT, "
-    "teleamp INT, "
-    "teleampmiss INT, "
-    "telespeaker INT, "
-    "telespeakermiss INT, "
-    "trap INT, "
+    "teleL1 INT, "
+    "teleL2 INT, "
+    "teleL3 INT, "
+    "teleL4 INT, "
+    "teleprocessor INT, "
+    "net INT, "
     "endpos VARCHAR(16), "
-    "harmony INT, "
-    "spotlight VARCHAR(16), "
     "offence INT, "
     "defence INT, "
     "died BIT, "
@@ -61,6 +65,7 @@ cur.execute(
     "defended BIT, "
     "card VARCHAR(16), "
     "foul INT, "
+    "RP VARCHAR(16), "
     "comments VARCHAR(512)"
     ")"
 )
@@ -128,19 +133,22 @@ while True:
         "teamnum, "
         "noshow, "
         "automobile, "
-        "autoamp, "
-        "autoampmiss, "
-        "autospeaker, "
-        "autospeakermiss, "
+        "autoL1, "
+        "autol1miss, "
+        "autoL2, "
+        "autol2miss, "
+        "autoL3, "
+        "autol3miss, "
+        "autoL4, "
+        "autol4miss, "
+        "autoprocessor, "
         "coop, "
-        "teleamp, "
-        "teleampmiss, "
-        "telespeaker, "
-        "telespeakermiss, "
-        "trap, "
-        "endpos, "
-        "harmony, "
-        "spotlight, "
+        "teleL1, "
+        "teleL2, "
+        "teleL3, "
+        "teleL4, "
+        "teleprocessor, "
+        "net, "
         "offence, "
         "defence, "
         "died, "
@@ -148,10 +156,11 @@ while True:
         "defended, "
         "card, "
         "foul, "
+        "RP, "
         "comments"
         ") "
         "VALUES"
-        "(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+        "(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
         (
             data['pre']['i'],        # initials
                     int(data['pre']['m']),   # matchnum
@@ -159,18 +168,22 @@ while True:
                     int(data['pre']['t']),   # teamnum
                     int(data['pre']['n']),   # noshow
                     int(data['auto']['m']),  # automobile
-                    int(data['auto']['A']),  # autoamp
-                    int(data['auto']['a']),  # autoampmiss
-                    int(data['auto']['S']),  # autospeaker
-                    int(data['auto']['s']),  # autospeakermiss
+                    int(data['auto']['o']),  # autoL1
+                    int(data['auto']['O']),  # autoL1miss
+                    int(data['auto']['t']),  # autoL2
+                    int(data['auto']['T']),  # autoL2miss
+                    int(data['auto']['h']),  # autoL3
+                    int(data['auto']['H']),  # autoL3miss
+                    int(data['auto']['f']),  # autoL4
+                    int(data['auto']['F']),  # autoL4miss
+                    int(data['auto']['p']),  # autoprocessor
                     int(data['tele']['c']),  # coop
-                    int(data['tele']['A']),  # teleamp
-                    int(data['tele']['a']),  # teleampmiss
-                    int(data['tele']['S']),  # telespeaker
-                    int(data['tele']['s']),  # telespeakermiss
-                    int(data['tele']['t']),  # trap
+                    int(data['tele']['o']),  # teleL1
+                    int(data['tele']['t']),  # teleL2
+                    int(data['tele']['r']),  # teleL3
+                    int(data['tele']['f']),  # teleL4
+                    int(data['tele']['p']),  # teleprocessor
                     data['end']['p'],        # endpos
-                    int(data['end']['h']),   # harmony
                     data['end']['h'],        # spotlight
                     int(data['post']['o']),  # offence
                     int(data['post']['d']),  # defence
@@ -179,6 +192,7 @@ while True:
                     int(data['post']['w']),  # defended
                     data['post']['c'],       # card
                     int(data['post']['f']),  # foul
+                    data['post']['R']        # RP
                     data['post']['C']        # comments
         )
     )
