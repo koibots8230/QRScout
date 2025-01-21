@@ -192,7 +192,7 @@ while True:
                     int(data['post']['w']),  # defended
                     data['post']['c'],       # card
                     int(data['post']['f']),  # foul
-                    data['post']['R']        # RP
+                    data['post']['R'],        # RP
                     data['post']['C']        # comments
         )
     )
