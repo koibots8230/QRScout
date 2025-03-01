@@ -4,6 +4,7 @@ import psycopg
 from cv2 import VideoCapture, flip, cvtColor, COLOR_BGR2RGBA
 from PIL import ImageTk, Image
 from qreader import QReader
+from pg8000 import dbapi
 
 import json
 
@@ -25,9 +26,15 @@ def settext(_text):
 DEBUG = True
 
 
-con = psycopg.connect(
-    "dbname=scouting user=postgres host=localhost password=postgres port=5432"
+con = dbapi.connect(
+    host="localhost",
+    database="scouting",
+    port="5432",
+    user="postgres",
+    password="8230"
 )
+
+con.autocommit = True
 
 cur = con.cursor()
 decoder = QReader()
@@ -94,61 +101,71 @@ while True:
             (
             initals,
             match_number,
-            start_position,
             teamnum,
+            start_position,
             no_show,
+            cage_position,
             automobile,
-            auto_amp,
-            auto_amp_miss,
-            auto_speaker,
-            auto_speaker_miss,
-            coop,
-            tele_amp,
-            tele_amp_miss,
-            tele_speaker,
-            tele_speaker_miss,
-            trap,
+            auto_l1,
+            auto_l2,
+            auto_l3,
+            auto_l4,
+            auto_algae_barge,
+            auto_alga_processor,
+            auto_algae_dislodged,
+            auto_foul,
+            tele_algae_dislodged,
+            intake_type,
+            tele_l1,
+            tele_l2,
+            tele_l3,
+            tele_l4,
+            tele_algae_barge,
+            tele_algae_processor,
+            tipped,
+            touched_cage,
+            died,
             end_position,
-            harmony,
-            spotlight,
+            defended,
             offense,
             defense,
-            died,
-            tipped,
-            defended,
             card,
-            foul,
             comments
             ) VALUES (
-                %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s
+                %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s
             )""", 
             (
                 data['pre']['i'],        # initials
                 int(data['pre']['matchNumber']),   # matchnum
-                data['pre']['p'],        # startpos
                 int(data['pre']['t']),   # teamnum
+                data['pre']['p'],        # startpos
                 data['pre']['n'],   # noshow
+                data['pre']['c'],   #cage position
                 data['auto']['m'],  # automobile
-                int(data['auto']['A']),  # autoamp
-                int(data['auto']['a']),  # autoampmiss
-                int(data['auto']['S']),  # autospeaker
-                int(data['auto']['s']),  # autospeakermiss
-                data['tele']['cc'],  # coop
-                int(data['tele']['AA']),  # teleamp
-                int(data['tele']['am']),  # teleampmiss
-                int(data['tele']['SS']),  # telespeaker
-                int(data['tele']['ss']),  # telespeakermiss
-                int(data['tele']['tt']),  # trap
-                data['end']['p'],        # endpos
-                int(data['end']['h']),   # harmony
-                data['end']['a'],        # spotlight
+                int(data['auto']['A']),  # l1
+                int(data['auto']['a']),  # l2
+                int(data['auto']['B']),  # l3
+                int(data['auto']['b']),  # l4
+                int(data['auto']['S']),  # barge algae
+                int(data['auto']['s']),  # processor algae
+                int(data['auto']['D']),  # dislodged algae
+                int(data['auto']['f']),  # auto foul
+                data['tele']['d'],  # dislodged algae
+                data['tele']['I'],  # intake position
+                int(data['tele']['L']),  # L1
+                int(data['tele']['l']),  # L2
+                int(data['tele']['T']),  # L3
+                int(data['tele']['t']),  # L4
+                int(data['tele']['p']),   # barge algae
+                int(data['tele']['h']),   # processor algae
+                data['post']['t'],  # tipped
+                data['end']['a'],        # touched opps cage
+                data['post']['D'],  # died
+                data['end']['ps'], #end position
+                data['post']['w'],  # defended
                 int(data['post']['o']),  # offence
                 int(data['post']['d']),  # defence
-                data['post']['D'],  # died
-                data['post']['t'],  # tipped
-                data['post']['w'],  # defended
                 data['post']['c'],       # card
-                int(data['post']['f']),  # foul
                 data['post']['C']        # comments
             )
         )
@@ -198,5 +215,5 @@ while True:
                 data['pitScouting']['gearRatio'],
             
         ))
-    cur.connection.commit()
+    #cur.connection.commit() //autocommit already enabled
     
