@@ -121,75 +121,69 @@ while True:
     settext(data)
 
     cur.execute(
-        "INSERT INTO scouting"
+        "CREATE TABLE IF NOT EXISTS scouting"
         "("
+        "id, "
         "initials, "
         "matchnum, "
-        "startpos, "
         "teamnum, "
         "noshow, "
         "automobile, "
-        "autoL1, "
-        "autol1miss, "
-        "autoL2, "
-        "autol2miss, "
-        "autoL3, "
-        "autol3miss, "
-        "autoL4, "
-        "autol4miss, "
-        "autoprocessor, "
-        "coop, "
-        "teleL1, "
-        "teleL2, "
-        "teleL3, "
-        "teleL4, "
-        "teleprocessor, "
-        "net, "
+        "autoLeave, "
+        "autoHigh, "
+        "autoHighmiss, "
+        "autoLow, "
+        "autoLowmiss, "
+        "shutdown,"
+        "shutdownOpp, "
+        "teleHigh, "
+        "teleHighmiss, "
+        "teleLow, "
+        "teleLowmiss, "
+        "endpos, "
+        "bunny, "
         "offence, "
         "defence, "
         "died, "
         "tipped, "
-        "defended, "
         "card, "
         "foul, "
-        "RP, "
+        "autoRP, "
+        "luniteRP, "
+        "endgameRP, "
         "comments"
-        ") "
+        ")"
         "VALUES"
-        "(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+        "(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
         (
             data['pre']['i'],        # initials
-                    int(data['pre']['m']),   # matchnum
-                    data['pre']['p'],        # startpos
-                    int(data['pre']['t']),   # teamnum
-                    int(data['pre']['n']),   # noshow
-                    int(data['auto']['m']),  # automobile
-                    int(data['auto']['o']),  # autoL1
-                    int(data['auto']['O']),  # autoL1miss
-                    int(data['auto']['t']),  # autoL2
-                    int(data['auto']['T']),  # autoL2miss
-                    int(data['auto']['h']),  # autoL3
-                    int(data['auto']['H']),  # autoL3miss
-                    int(data['auto']['f']),  # autoL4
-                    int(data['auto']['F']),  # autoL4miss
-                    int(data['auto']['p']),  # autoprocessor
-                    int(data['tele']['c']),  # coop
-                    int(data['tele']['o']),  # teleL1
-                    int(data['tele']['t']),  # teleL2
-                    int(data['tele']['r']),  # teleL3
-                    int(data['tele']['f']),  # teleL4
-                    int(data['tele']['p']),  # teleprocessor
-                    data['end']['p'],        # endpos
-                    data['end']['h'],        # spotlight
-                    int(data['post']['o']),  # offence
-                    int(data['post']['d']),  # defence
-                    int(data['post']['D']),  # died
-                    int(data['post']['t']),  # tipped
-                    int(data['post']['w']),  # defended
-                    data['post']['c'],       # card
-                    int(data['post']['f']),  # foul
-                    data['post']['R'],        # RP
-                    data['post']['C']        # comments
+            int(data['pre']['N']),   # matchnum
+            int(data['pre']['t']),   # teamnum
+            (data['pre']['n']),   # noshow
+            (data['auto']['m']),  # automobile
+            (data['auto']['M']),  # leave
+            int(data['auto']['A']),  # autoHigh
+            int(data['auto']['a']),  # autoHighmiss
+            int(data['auto']['S']),  # autoLow
+            int(data['auto']['s']),  # autoLowmiss
+            (data['tele']['g']),  # gotShutdown?
+            (data['tele']['O']),  # shutdownOpponent?
+            int(data['tele']['H']),  # high
+            int(data['tele']['h']),  # highmiss
+            int(data['tele']['L']),  # low
+            int(data['tele']['l']),  # lowmiss
+            data['end']['e'],        # endpos
+            data['end']['b'],        # bunny?
+            data['post']['o'],  # offence
+            data['post']['d'],  # defence
+            data['post']['D'],  # died
+            data['post']['t'],  # tipped
+            data['post']['c'],       # card
+            int(data['post']['f']),  # foul
+            data['post']['aR'],        # autoRP
+            data['post']['lR'],        # luniteRP
+            data['post']['eR'],        # endgameRP
+            data['post']['C']        # comments
         )
     )
     cur.connection.commit()
