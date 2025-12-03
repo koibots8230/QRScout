@@ -146,12 +146,6 @@
                             "config": true
                         },
                         {
-                            "key": "p",
-                            "name": "Starting Position",
-                            "type": "select",
-                            "config": ["Red 1", "Red 2", "Red 3", "Blue 1", "Blue 2", "Blue 3"]
-                        },
-                        {
                             "key": "t",
                             "name": "Team Number",
                             "type": "number",
@@ -176,26 +170,32 @@
                             "config": true
                         },
                         {
+                            "key": "M",
+                            "name": "Left?",
+                            "type": "bool",
+                            "config": false
+                        },
+                        {
                             "key": "A",
-                            "name": "Amp Scored",
+                            "name": "High Goals",
                             "type": "number",
                             "config": true
                         },
                         {
                             "key": "a",
-                            "name": "Amp Missed",
+                            "name": "High Goals Missed",
                             "type": "number",
                             "config": true
                         },
                         {
                             "key": "S",
-                            "name": "Speaker Scored",
+                            "name": "Low Goals",
                             "type": "number",
                             "config": true
                         },
                         {
                             "key": "s",
-                            "name": "Speaker Missed",
+                            "name": "Low Goals Missed",
                             "type": "number",
                             "config": true
                         }
@@ -206,41 +206,41 @@
                     "name": "Teleop",
                     "items": [
                         {
+                            "key": "g",
+                            "name": "Got Shutdown?",
+                            "type": "bool",
+                            "config": false
+                        },
+                        {
                             "key": "c",
-                            "name": "Coopertition",
+                            "name": "Shutdown Opponent?",
                             "type": "bool",
                             "config": false
                         },
                         {
                             "key": "A",
-                            "name": "Amp Scored",
+                            "name": "High Goals",
                             "type": "number",
                             "config": true
                         },
                         {
                             "key": "a",
-                            "name": "Amp Missed",
+                            "name": "High Goals Missed",
                             "type": "number",
                             "config": true
                         },
                         {
                             "key": "S",
-                            "name": "Speaker Scored",
+                            "name": "Low Goals",
                             "type": "number",
                             "config": true
                         },
                         {
                             "key": "s",
-                            "name": "Speaker Missed",
+                            "name": "Low Goals Missed",
                             "type": "number",
                             "config": true
                         },
-                        {
-                            "key": "t",
-                            "name": "Trap Scored",
-                            "type": "number",
-                            "config": true
-                        }
                     ]
                 },
                 {
@@ -248,22 +248,16 @@
                     "name": "Endgame",
                     "items": [
                         {
-                            "key": "p",
+                            "key": "e",
                             "name": "End Position",
                             "type": "select",
-                            "config": ["Climb", "Wing", "None"]
-                        },
-                        {
-                            "key": "h",
-                            "name": "Harmony",
-                            "type": "select",
-                            "config": ["0", "2", "3"]
+                            "config": ["none", "lunar link", "bunny bundle", "link and bundle"]
                         },
                         {
                             "key": "a",
-                            "name": "Spotlight (from driverstation)",
-                            "type": "select",
-                            "config": ["None", "Left", "Middle", "Right"]
+                            "name": "Bunny (from human player)",
+                            "type": "bool",
+                            "config": false
                         }
                     ]
                 },
@@ -282,12 +276,6 @@
                             "name": "Defense Skill",
                             "type": "select",
                             "config": ["1", "2", "3"]
-                        },
-                        {
-                            "key": "w",
-                            "name": "Was Defended",
-                            "type": "bool",
-                            "config": true
                         },
                         {
                             "key": "D",
@@ -312,6 +300,24 @@
                             "name": "Foul Points",
                             "type": "number",
                             "config": true
+                        },
+                        {
+                            "key": "aR",
+                            "name": "Auto RP",
+                            "type": "bool",
+                            "config": false
+                        },
+                        {
+                            "key": "lR",
+                            "name": "Lunite RP",
+                            "type": "bool",
+                            "config": false
+                        },
+                        {
+                            "key": "eR",
+                            "name": "Endgame RP",
+                            "type": "bool",
+                            "config": false
                         },
                         {
                             "key": "C",
