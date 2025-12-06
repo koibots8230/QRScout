@@ -97,83 +97,68 @@ while True:
         cur.execute(
             """
             INSERT INTO stand_scouting 
-            (
-            initals,
-            match_number,
-            teamnum,
-            start_position,
-            no_show,
-            cage_position,
-            automobile,
-            auto_l1,
-            auto_l2,
-            auto_l3,
-            auto_l4,
-            auto_algae_barge,
-            auto_algae_processor,
-            auto_algae_dislodged,
-            auto_foul,
-            tele_algae_dislodged,
-            coral_intake,
-            algae_intake,
-            tele_l1,
-            tele_l2,
-            tele_l3,
-            tele_l4,
-            tele_algae_barge,
-            tele_algae_processor,
-            end_position,
-            touched_opps_cage,
-            coral_RP,
-            barge_RP,
-            auto_RP,
-            offense,
-            defense,
-            was_defended,
-            died,
-            tipped,
-            card,
-            comments
+            "(
+             id INT PRIMARY KEY, 
+            initials VARCHAR(16), 
+            matchnum INT, 
+            teamnum INT, 
+            noshow BIT, 
+            automobile BIT, 
+            autoLeave BIT, 
+            autoHigh INT, 
+            autoHighmiss INT, 
+            autoLow INT, 
+            autoLowmiss INT, 
+            shutdown BIT,
+            shutdownOpp BIT, 
+            teleHigh INT, 
+            teleHighmiss INT, 
+            teleLow INT, 
+            teleLowmiss INT, 
+            endpos VARCHAR(16), 
+            bunny BIT, 
+            offence INT, 
+            defence INT, 
+            died BIT, 
+            tipped BIT, 
+            card VARCHAR(16), 
+            foul INT, 
+            autoRP BIT, 
+            luniteRP BIT, 
+            endgameRP BIT, 
+            comments VARCHAR(512)
             )
-            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
             """, 
             (
                 data['pre']['i'],        # initials
-                int(data['pre']['matchNumber']),   # matchnum
-                int(data['pre']['team']),   # teamnum
-                data['pre']['p'],        # startpos
-                data['pre']['n'],   # noshow
-                data['pre']['cage'],    #cage position
-                data['auto']['m'],  # automobile
-                int(data['auto']['ellwan']),  # l1
-                int(data['auto']['elltwo']),  # l2
-                int(data['auto']['ellthre']),  # l3
-                int(data['auto']['ellfor']),  # l4
-                int(data['auto']['S']),  # barge algae
-                int(data['auto']['s']),  # processor algae
-                int(data['auto']['Di']),  # auto dislodged algae
-                int(data['auto']['f']),  # auto foul
-                data['tele']['d'],  # tele dislodged algae
-                data['tele']['I'],  # coral intake position
-                data['tele']['gi'], #algae intake positon
-                int(data['tele']['L']),  # L1
-                int(data['tele']['l']),  # L2
-                int(data['tele']['T']),  # L3
-                int(data['tele']['F']),  # L4
-                int(data['tele']['p']),   # barge algae
-                int(data['tele']['h']),   # processor algae
-                data['end']['ps'],  #end position
-                data['end']['a'],        # touched opps cage
-                data["post"]["rp"],    #coral rp
-                data["post"]["pr"], #barge rp
-                data["post"]["ar"], # auto rp
-                int(data['post']['o']),  # offence
-                int(data['post']['de']),  # defence
-                data['post']['w'],  # was defended
-                data['post']['D'],  # died
-                data['post']['ti'],  # tipped
-                data['post']['c'],       # card
-                data['post']['C']        # comments
+            int(data['pre']['N']),   # matchnum
+            int(data['pre']['t']),   # teamnum
+            (data['pre']['n']),   # noshow
+            (data['auto']['m']),  # automobile
+            (data['auto']['M']),  # leave
+            int(data['auto']['A']),  # autoHigh
+            int(data['auto']['a']),  # autoHighmiss
+            int(data['auto']['S']),  # autoLow
+            int(data['auto']['s']),  # autoLowmiss
+            (data['tele']['g']),  # gotShutdown?
+            (data['tele']['O']),  # shutdownOpponent?
+            int(data['tele']['H']),  # high
+            int(data['tele']['h']),  # highmiss
+            int(data['tele']['L']),  # low
+            int(data['tele']['l']),  # lowmiss
+            data['end']['e'],        # endpos
+            data['end']['b'],        # bunny?
+            data['post']['o'],  # offence
+            data['post']['d'],  # defence
+            data['post']['D'],  # died
+            data['post']['t'],  # tipped
+            data['post']['c'],       # card
+            int(data['post']['f']),  # foul
+            data['post']['aR'],        # autoRP
+            data['post']['lR'],        # luniteRP
+            data['post']['eR'],        # endgameRP
+            data['post']['C']        # comments
             )
         )
     else:

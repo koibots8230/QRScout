@@ -1342,282 +1342,204 @@
     </script>
     <script>
       const formScheme = [
-        {
-          key: "pre",
-          name: "Prematch",
-          items: [
-            {
-              key: "i",
-              name: "Scouter Initials",
-              type: "text",
-              config: true,
-              required: true,
-            },
-            {
-              key: "matchNumber",
-              name: "Match Number",
-              type: "number",
-              config: true,
-              required: true,
-            },
-            {
-              key: "team", 
-              name: "Team Number",
-              type: "number",
-              config: true,
-              require: true,
-            },
-            {
-              key: "p",
-              name: "Starting Position",
-              type: "select",
-              config: ["Red 1", "Red 2", "Red 3", "Blue 1", "Blue 2", "Blue 3"],
-              require: true,
-            },
-            {
-              key: "n",
-              name: "No Show",
-              type: "bool",
-              config: false,
-            },
-            {
-              key: "cage",
-              name: "Cage Position",
-              type: "select",
-              config: ["deep", "shallow", "can't see"],
-              require: true,
-            },
-          ],
-        },
-        {
-          key: "auto",
-          name: "Autonomous",
-          items: [
-            {
-              key: "m",
-              name: "Mobility",
-              type: "bool",
-              config: true,
-            },
-            {
-              key: "ellwan",
-              name: "L1 Scored",
-              type: "number",
-              default: "0",
-              require: false,
-            },
-            {
-              key: "elltwo",
-              name: "L2 Scored",
-              type: "number",
-              default: "0",
-              require: false,
-            },
-            {
-              key: "ellthre",
-              name: "L3 Scored",
-              type: "number",
-              default: "0",
-              require: false,
-            },
-            {
-              key: "ellfor",
-              name: "L4 Scored",
-              type: "number",
-              default: "0",
-              require: false,
-            },
-            {
-              key: "S",
-              name: "Barge Algae",
-              type: "number",
-              default: "0",
-              require: false,
-            },
-            {
-              key: "s",
-              name: "Processor Algae",
-              type: "number",
-              default: "0",
-              require: false,
-            },
-            {
-              key: "Di",
-              name: "auto dislodged Algae",
-              type: "number",
-              default: "0",
-              require: false,
-            },
-            {
-              key: "f",
-              name: "Auto Foul",
-              type: "number",
-              default: "0",
-              require: false,
-            }
-          ],
-        },
-        {
-          key: "tele",
-          name: "Teleop",
-          items: [
-            {
-              key: "d",
-              name: "tele dislodged algae",
-              type: "number",
-              default: "0",
-              require: false,
-            },
-            {
-              key: "I",
-              name: "coral intake position",
-              type: "select",
-              config: ["source", "ground"],
-            },
-            {
-              key: "gi",
-              name: "algae intake position",
-              type: "select",
-              config: ["none","ground", "reef"],
-            },
-            {
-              key: "L",
-              name: "L1",
-              type: "number",
-              default: "0",
-              require: false,
-            },
-            {
-              key: "l",
-              name: "L2",
-              type: "number",
-              default: "0",
-              require: false,
-            },
-            {
-              key: "T",
-              name: "L3",
-              type: "number",
-              default: "0",
-              require: false,
-            },
-            {
-              key: "F",
-              name: "L4",
-              type: "number",
-              default: "0",
-              require: false,
-            },
-            {
-              key: "p",
-              name: "Barge algae",
-              type: "number",
-              default: "0",
-              require: false,
-            },
-            {
-              key: "h",
-              name: "Processor Algae",
-              type: "number",
-              default: "0",
-              require: false,
-            },
-          ],
-        },
-        {
-          key: "end",
-          name: "Endgame",
-          items: [
-            {
-              key: "ps",
-              name: "End Position",
-              type: "select",
-              config: ["None", "Climb", "Park"],
-              default: "None",
-            },
-            {
-              key: "a",
-              name: "touched opps cage",
-              type: "bool",
-              config: false,
-            },
-          ],
-        },
-        {
-          key: "post",
-          name: "Postgame",
-          items: [
-            {
-              key: "rp",
-              name: "Coral RP",
-              type: "bool",
-              config: false,
-              require: false,
-            },
-            {
-              key: "pr",
-              name: "Barge RP",
-              type: "bool",
-              config: false,
-              require: false,
-            },
-            {
-              key: "ar",
-              name: "Auto RP",
-              type: "bool",
-              config: false,
-              require: false,
-            },
-            {
-              key: "o", //need to edit
-              name: "Offense Skill/10",
-              type: "range",
-              minimum: 0,
-              maximum: 10,
-              default: 0,
-              step: 1,
-            },
-            {
-              key: "de",
-              name: "Defense Skill/10",
-              type: "range",
-              minimum: 0,
-              maximum: 10,
-              dafault: 0,
-              step: 1,
-            },
-            {
-              key: "w",
-              name: "Was Defended",
-              type: "bool",
-              config: false,
-            },
-            {
-              key: "D",
-              name: "Died",
-              type: "bool",
-              config: false,
-            },
-            {
-              key: "ti",
-              name: "Tipped",
-              type: "bool",
-              config: false,
-            },
-            {
-              key: "c",
-              name: "Yellow/Red Card",
-              type: "select",
-              config: ["None", "Yellow", "Red"],
-            },
-            {
-              key: "C",
-              name: "Comments",
-              type: "text",
-              config: false,
-            },
-          ],
-        }, //36 fields
+      {
+                    "key": "pre",
+                    "name": "Prematch",
+                    "items": [
+                        {
+                            "key": "i",
+                            "name": "Scouter Initials",
+                            "type": "text",
+                            "config": true
+                        },
+                        {
+                            "key": "N",
+                            "name": "Match Number",
+                            "type": "number",
+                            "config": true
+                        },
+                        {
+                            "key": "t",
+                            "name": "Team Number",
+                            "type": "number",
+                            "config": true
+                        },
+                        {
+                            "key": "n",
+                            "name": "No Show",
+                            "type": "bool",
+                            "config": false
+                        }
+                    ]
+                },
+                {
+                    "key": "auto",
+                    "name": "Autonomous",
+                    "items": [
+                        {
+                            "key": "m",
+                            "name": "Mobility",
+                            "type": "bool",
+                            "config": true
+                        },
+                        {
+                            "key": "M",
+                            "name": "Left?",
+                            "type": "bool",
+                            "config": false
+                        },
+                        {
+                            "key": "A",
+                            "name": "High Goals",
+                            "type": "number",
+                            "config": true
+                        },
+                        {
+                            "key": "a",
+                            "name": "High Goals Missed",
+                            "type": "number",
+                            "config": true
+                        },
+                        {
+                            "key": "S",
+                            "name": "Low Goals",
+                            "type": "number",
+                            "config": true
+                        },
+                        {
+                            "key": "s",
+                            "name": "Low Goals Missed",
+                            "type": "number",
+                            "config": true
+                        }
+                    ]
+                },
+                {
+                    "key": "tele",
+                    "name": "Teleop",
+                    "items": [
+                        {
+                            "key": "g",
+                            "name": "Got Shutdown?",
+                            "type": "bool",
+                            "config": false
+                        },
+                        {
+                            "key": "O",
+                            "name": "Shutdown Opponent?",
+                            "type": "bool",
+                            "config": false
+                        },
+                        {
+                            "key": "H",
+                            "name": "High Goals",
+                            "type": "number",
+                            "config": true
+                        },
+                        {
+                            "key": "h",
+                            "name": "High Goals Missed",
+                            "type": "number",
+                            "config": true
+                        },
+                        {
+                            "key": "L",
+                            "name": "Low Goals",
+                            "type": "number",
+                            "config": true
+                        },
+                        {
+                            "key": "l",
+                            "name": "Low Goals Missed",
+                            "type": "number",
+                            "config": true
+                        },
+                    ]
+                },
+                {
+                    "key": "end",
+                    "name": "Endgame",
+                    "items": [
+                        {
+                            "key": "e",
+                            "name": "End Position",
+                            "type": "select",
+                            "config": ["none", "lunar link", "bunny bundle", "link and bundle"]
+                        },
+                        {
+                            "key": "b",
+                            "name": "Bunny (from human player)",
+                            "type": "bool",
+                            "config": false
+                        }
+                    ]
+                },
+                {
+                    "key": "post",
+                    "name": "Postgame",
+                    "items": [
+                        {
+                            "key": "o",
+                            "name": "Offense Skill",
+                            "type": "select",
+                            "config": ["1", "2", "3"]
+                        },
+                        {
+                            "key": "d",
+                            "name": "Defense Skill",
+                            "type": "select",
+                            "config": ["1", "2", "3"]
+                        },
+                        {
+                            "key": "D",
+                            "name": "Died",
+                            "type": "bool",
+                            "config": false
+                        },
+                        {
+                            "key": "t",
+                            "name": "Tipped",
+                            "type": "bool",
+                            "config": false
+                        },
+                        {
+                            "key": "c",
+                            "name": "Yellow/Red Card",
+                            "type": "select",
+                            "config": ["None", "Yellow", "Red"]
+                        },
+                        {
+                            "key": "f",
+                            "name": "Foul Points",
+                            "type": "number",
+                            "config": true
+                        },
+                        {
+                            "key": "aR",
+                            "name": "Auto RP",
+                            "type": "bool",
+                            "config": false
+                        },
+                        {
+                            "key": "lR",
+                            "name": "Lunite RP",
+                            "type": "bool",
+                            "config": false
+                        },
+                        {
+                            "key": "eR",
+                            "name": "Endgame RP",
+                            "type": "bool",
+                            "config": false
+                        },
+                        {
+                            "key": "C",
+                            "name": "Comments",
+                            "type": "text",
+                            "config": false
+                        }
+                    ]
+                } //36 fields
       ];
 
       async function generateQR() {
